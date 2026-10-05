@@ -42,128 +42,125 @@ st.set_page_config(
 )
 
 # -----------------------------------------------------------------------------
-# Curated Fresh & Vibrant Multi-Theme Design Palettes
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# Curated Fresh & Vibrant Multi-Theme Design Palettes
+# Curated Fresh & High-Contrast Design Palettes
 # -----------------------------------------------------------------------------
 THEMES = {
     "🌿 Fresh Nordic Mint & Aqua (Luminous Emerald & Cyan)": {
         "is_dark": False,
-        "bg_main": "#f3faf6",
+        "bg_main": "#f2f8f5",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
-        "card_border": "rgba(16, 185, 129, 0.22)",
-        "card_shadow": "0 10px 25px -4px rgba(16, 185, 129, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
-        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(236, 253, 245, 0.95) 100%)",
+        "card_border": "rgba(5, 150, 105, 0.28)",
+        "card_shadow": "0 10px 25px -4px rgba(5, 150, 105, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #ebfbf3 100%)",
         "accent_primary": "#059669",
-        "accent_secondary": "#06b6d4",
-        "accent_tertiary": "#6366f1",
+        "accent_secondary": "#0284c7",
+        "accent_tertiary": "#4f46e5",
         "positive": "#10b981",
-        "warning": "#f59e0b",
-        "negative": "#f43f5e",
-        "text_main": "#0f172a",
-        "text_sub": "#475569",
-        "gradient_hero": "linear-gradient(135deg, #059669 0%, #06b6d4 50%, #6366f1 100%)",
-        "hero_glow": "rgba(16, 185, 129, 0.15)",
-        "kpi_top_border": "linear-gradient(90deg, #059669, #06b6d4)",
-        "btn_gradient": "linear-gradient(135deg, #059669 0%, #06b6d4 100%)",
+        "warning": "#d97706",
+        "negative": "#e11d48",
+        "text_main": "#09101d",
+        "text_sub": "#27364b",
+        "gradient_hero": "linear-gradient(135deg, #059669 0%, #0284c7 50%, #4f46e5 100%)",
+        "hero_glow": "rgba(5, 150, 105, 0.16)",
+        "kpi_top_border": "linear-gradient(90deg, #059669, #0284c7)",
+        "btn_gradient": "linear-gradient(135deg, #059669 0%, #0284c7 100%)",
         "plotly_line": "#059669",
         "plotly_template": "plotly_white",
         "plotly_paper": "#ffffff",
-        "plotly_plot": "#f8fafc",
-        "plotly_grid": "rgba(0,0,0,0.06)",
-        "chart_colors": ["#059669", "#06b6d4", "#6366f1", "#10b981", "#f59e0b", "#f43f5e"]
+        "plotly_plot": "#f7faf8",
+        "plotly_grid": "rgba(0,0,0,0.08)",
+        "chart_colors": ["#059669", "#0284c7", "#4f46e5", "#10b981", "#d97706", "#e11d48"]
     },
     "💎 Arctic Ice & Electric Cobalt (Fresh Clean SaaS)": {
         "is_dark": False,
-        "bg_main": "#f0f6fc",
+        "bg_main": "#eff5fc",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
-        "card_border": "rgba(37, 99, 235, 0.22)",
-        "card_shadow": "0 10px 25px -4px rgba(37, 99, 235, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
-        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(239, 246, 255, 0.95) 100%)",
+        "card_border": "rgba(37, 99, 235, 0.26)",
+        "card_shadow": "0 10px 25px -4px rgba(37, 99, 235, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #eaf2fd 100%)",
         "accent_primary": "#2563eb",
-        "accent_secondary": "#0ea5e9",
-        "accent_tertiary": "#8b5cf6",
+        "accent_secondary": "#0284c7",
+        "accent_tertiary": "#7c3aed",
         "positive": "#10b981",
-        "warning": "#f59e0b",
-        "negative": "#f43f5e",
-        "text_main": "#0f172a",
-        "text_sub": "#475569",
-        "gradient_hero": "linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #8b5cf6 100%)",
-        "hero_glow": "rgba(37, 99, 235, 0.15)",
-        "kpi_top_border": "linear-gradient(90deg, #2563eb, #0ea5e9)",
-        "btn_gradient": "linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%)",
+        "warning": "#d97706",
+        "negative": "#e11d48",
+        "text_main": "#09101d",
+        "text_sub": "#27364b",
+        "gradient_hero": "linear-gradient(135deg, #2563eb 0%, #0284c7 50%, #7c3aed 100%)",
+        "hero_glow": "rgba(37, 99, 235, 0.16)",
+        "kpi_top_border": "linear-gradient(90deg, #2563eb, #0284c7)",
+        "btn_gradient": "linear-gradient(135deg, #2563eb 0%, #0284c7 100%)",
         "plotly_line": "#2563eb",
         "plotly_template": "plotly_white",
         "plotly_paper": "#ffffff",
-        "plotly_plot": "#f8fafc",
-        "plotly_grid": "rgba(0,0,0,0.06)",
-        "chart_colors": ["#2563eb", "#0ea5e9", "#8b5cf6", "#10b981", "#f59e0b", "#f43f5e"]
+        "plotly_plot": "#f6f9fc",
+        "plotly_grid": "rgba(0,0,0,0.08)",
+        "chart_colors": ["#2563eb", "#0284c7", "#7c3aed", "#10b981", "#d97706", "#e11d48"]
     },
     "🌸 Fresh Orchid & Coral Sunset (Warm Vibrant Bloom)": {
         "is_dark": False,
-        "bg_main": "#fdf4f8",
+        "bg_main": "#fdf2f7",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
-        "card_border": "rgba(217, 70, 239, 0.22)",
-        "card_shadow": "0 10px 25px -4px rgba(217, 70, 239, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
-        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(253, 242, 248, 0.95) 100%)",
-        "accent_primary": "#d946ef",
-        "accent_secondary": "#f43f5e",
+        "card_border": "rgba(217, 70, 239, 0.26)",
+        "card_shadow": "0 10px 25px -4px rgba(217, 70, 239, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #fdeaf2 100%)",
+        "accent_primary": "#c026d3",
+        "accent_secondary": "#e11d48",
         "accent_tertiary": "#0d9488",
         "positive": "#10b981",
-        "warning": "#f59e0b",
-        "negative": "#f43f5e",
-        "text_main": "#1e1b4b",
-        "text_sub": "#64748b",
-        "gradient_hero": "linear-gradient(135deg, #d946ef 0%, #f43f5e 50%, #0d9488 100%)",
-        "hero_glow": "rgba(217, 70, 239, 0.15)",
-        "kpi_top_border": "linear-gradient(90deg, #d946ef, #f43f5e)",
-        "btn_gradient": "linear-gradient(135deg, #d946ef 0%, #f43f5e 100%)",
-        "plotly_line": "#d946ef",
+        "warning": "#d97706",
+        "negative": "#e11d48",
+        "text_main": "#1e112a",
+        "text_sub": "#3b2b48",
+        "gradient_hero": "linear-gradient(135deg, #c026d3 0%, #e11d48 50%, #0d9488 100%)",
+        "hero_glow": "rgba(217, 70, 239, 0.16)",
+        "kpi_top_border": "linear-gradient(90deg, #c026d3, #e11d48)",
+        "btn_gradient": "linear-gradient(135deg, #c026d3 0%, #e11d48 100%)",
+        "plotly_line": "#c026d3",
         "plotly_template": "plotly_white",
         "plotly_paper": "#ffffff",
         "plotly_plot": "#fdf4f8",
-        "plotly_grid": "rgba(0,0,0,0.05)",
-        "chart_colors": ["#d946ef", "#f43f5e", "#0d9488", "#10b981", "#f59e0b", "#6366f1"]
+        "plotly_grid": "rgba(0,0,0,0.07)",
+        "chart_colors": ["#c026d3", "#e11d48", "#0d9488", "#10b981", "#d97706", "#4f46e5"]
     },
     "🍋 Fresh Citrus Mojito (Sunlit Lime & Teal)": {
         "is_dark": False,
-        "bg_main": "#f6fbf4",
+        "bg_main": "#f5faf2",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
-        "card_border": "rgba(101, 163, 13, 0.25)",
-        "card_shadow": "0 10px 25px -4px rgba(101, 163, 13, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
-        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 254, 231, 0.95) 100%)",
-        "accent_primary": "#65a30d",
-        "accent_secondary": "#0d9488",
-        "accent_tertiary": "#eab308",
-        "positive": "#16a34a",
-        "warning": "#eab308",
-        "negative": "#f43f5e",
-        "text_main": "#142510",
-        "text_sub": "#4b5e43",
-        "gradient_hero": "linear-gradient(135deg, #65a30d 0%, #0d9488 50%, #eab308 100%)",
-        "hero_glow": "rgba(101, 163, 13, 0.15)",
-        "kpi_top_border": "linear-gradient(90deg, #65a30d, #0d9488)",
-        "btn_gradient": "linear-gradient(135deg, #65a30d 0%, #0d9488 100%)",
-        "plotly_line": "#65a30d",
+        "card_border": "rgba(101, 163, 13, 0.28)",
+        "card_shadow": "0 10px 25px -4px rgba(101, 163, 13, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #f2fadc 100%)",
+        "accent_primary": "#4d7c0f",
+        "accent_secondary": "#0f766e",
+        "accent_tertiary": "#b45309",
+        "positive": "#15803d",
+        "warning": "#b45309",
+        "negative": "#be123c",
+        "text_main": "#121f0c",
+        "text_sub": "#2d3d24",
+        "gradient_hero": "linear-gradient(135deg, #4d7c0f 0%, #0f766e 50%, #b45309 100%)",
+        "hero_glow": "rgba(101, 163, 13, 0.16)",
+        "kpi_top_border": "linear-gradient(90deg, #4d7c0f, #0f766e)",
+        "btn_gradient": "linear-gradient(135deg, #4d7c0f 0%, #0f766e 100%)",
+        "plotly_line": "#4d7c0f",
         "plotly_template": "plotly_white",
         "plotly_paper": "#ffffff",
-        "plotly_plot": "#f7faf5",
-        "plotly_grid": "rgba(0,0,0,0.06)",
-        "chart_colors": ["#65a30d", "#0d9488", "#eab308", "#16a34a", "#f97316", "#ef4444"]
+        "plotly_plot": "#f6faf3",
+        "plotly_grid": "rgba(0,0,0,0.08)",
+        "chart_colors": ["#4d7c0f", "#0f766e", "#b45309", "#15803d", "#c2410c", "#be123c"]
     },
     "🌙 Midnight Aurora Neon (Fresh Cyber Dark)": {
         "is_dark": True,
         "bg_main": "#0b0f19",
         "sidebar_bg": "#080c14",
-        "card_bg": "rgba(18, 25, 44, 0.88)",
-        "card_border": "rgba(0, 245, 155, 0.28)",
-        "card_shadow": "0 10px 30px -5px rgba(0, 0, 0, 0.6)",
-        "hero_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%)",
+        "card_bg": "rgba(18, 25, 44, 0.92)",
+        "card_border": "rgba(0, 245, 155, 0.32)",
+        "card_shadow": "0 10px 30px -5px rgba(0, 0, 0, 0.65)",
+        "hero_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.98) 100%)",
         "accent_primary": "#00f59b",
         "accent_secondary": "#00d2ff",
         "accent_tertiary": "#ffbe0b",
@@ -171,16 +168,16 @@ THEMES = {
         "warning": "#ffbe0b",
         "negative": "#ff3366",
         "text_main": "#ffffff",
-        "text_sub": "#94a3b8",
+        "text_sub": "#cbd5e1",
         "gradient_hero": "linear-gradient(135deg, #00f59b 0%, #00d2ff 50%, #ffbe0b 100%)",
-        "hero_glow": "rgba(0, 245, 155, 0.25)",
+        "hero_glow": "rgba(0, 245, 155, 0.28)",
         "kpi_top_border": "linear-gradient(90deg, #00f59b, #00d2ff)",
         "btn_gradient": "linear-gradient(135deg, #00f59b 0%, #00d2ff 100%)",
         "plotly_line": "#00d2ff",
         "plotly_template": "plotly_dark",
         "plotly_paper": "rgba(0,0,0,0)",
-        "plotly_plot": "rgba(18, 25, 44, 0.88)",
-        "plotly_grid": "rgba(255,255,255,0.08)",
+        "plotly_plot": "rgba(18, 25, 44, 0.92)",
+        "plotly_grid": "rgba(255,255,255,0.10)",
         "chart_colors": ["#00f59b", "#00d2ff", "#ffbe0b", "#ff3366", "#a78bfa", "#38bdf8"]
     }
 }
@@ -213,15 +210,15 @@ except Exception as e:
 with st.sidebar:
     st.markdown("""
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px; padding:6px 0;">
-        <div style="background:linear-gradient(135deg, #059669, #06b6d4); width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 6px 18px rgba(5, 150, 105, 0.35);">⚡</div>
+        <div style="background:linear-gradient(135deg, #059669, #0284c7); width:46px; height:46px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; box-shadow:0 6px 18px rgba(5, 150, 105, 0.35);">⚡</div>
         <div>
-            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.25rem; font-weight:800; color:inherit; line-height:1.1; letter-spacing:-0.01em;">DISASTER AI</div>
-            <div style="font-size:0.75rem; opacity:0.8; letter-spacing:0.06em; font-weight:700;">FRESH DEMAND OS</div>
+            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.3rem; font-weight:800; color:inherit; line-height:1.1; letter-spacing:-0.01em;">DISASTER AI</div>
+            <div style="font-size:0.75rem; opacity:0.85; letter-spacing:0.06em; font-weight:700;">DEMAND FORECAST OS</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>🎨 Visual Color Palette</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.80rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.9; font-weight:800; margin-bottom:6px;'>🎨 Visual Color Palette</p>", unsafe_allow_html=True)
     selected_theme_name = st.selectbox(
         "Color Theme",
         list(THEMES.keys()),
@@ -230,8 +227,8 @@ with st.sidebar:
     )
     theme = THEMES[selected_theme_name]
     
-    st.markdown("<hr style='opacity:0.15; margin:1.1rem 0;'>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>📍 Geographic & Category Filters</p>", unsafe_allow_html=True)
+    st.markdown("<hr style='opacity:0.18; margin:1.1rem 0;'>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.80rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.9; font-weight:800; margin-bottom:6px;'>📍 Geographic & Category Filters</p>", unsafe_allow_html=True)
     
     all_regions = ['All Regions'] + sorted(sales_df['region'].unique().tolist())
     selected_region = st.selectbox("Geographic Market", all_regions, index=0)
@@ -242,8 +239,8 @@ with st.sidebar:
     all_channels = ['All Channels'] + sorted(sales_df['channel'].unique().tolist())
     selected_channel = st.selectbox("Fulfillment Channel", all_channels, index=0)
     
-    st.markdown("<hr style='opacity:0.15; margin:1.1rem 0;'>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>🤖 Active Forecasting Model</p>", unsafe_allow_html=True)
+    st.markdown("<hr style='opacity:0.18; margin:1.1rem 0;'>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.80rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.9; font-weight:800; margin-bottom:6px;'>🤖 Active Forecasting Model</p>", unsafe_allow_html=True)
     
     selected_model_name = st.selectbox(
         "Active Model Architecture",
@@ -252,8 +249,8 @@ with st.sidebar:
     )
     
     st.markdown(f"""
-    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.05)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 14px; margin-top:14px; font-size:0.80rem; color:{theme['text_sub']}; line-height:1.5;">
-        <span style="font-weight:700; color:{theme['accent_primary']};">Strict Validation Protocol:</span><br>
+    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.05)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 14px; margin-top:14px; font-size:0.82rem; color:{theme['text_sub']}; line-height:1.5;">
+        <span style="font-weight:800; color:{theme['accent_primary']};">Strict Validation Protocol:</span><br>
         2019–2022 Train, 2023 Out-of-Time Test.<br>
         <b>0% Future Data Leakage.</b>
     </div>
@@ -275,6 +272,30 @@ st.markdown(f"""
         background: radial-gradient(circle at 10% 8%, {theme['hero_glow']} 0%, transparent 45%),
                     radial-gradient(circle at 90% 85%, {theme['hero_glow']} 0%, transparent 50%),
                     {theme['bg_main']} !important;
+    }}
+
+    /* Global Text High Contrast Guarantees */
+    h1, h2, h3, h4, h5, h6 {{
+        color: {theme['text_main']} !important;
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.01em !important;
+    }}
+
+    p, span, div, li, td, th {{
+        color: {theme['text_main']};
+    }}
+
+    .stCaption, [data-testid="stCaptionContainer"] p {{
+        color: {theme['text_sub']} !important;
+        font-weight: 600 !important;
+        font-size: 0.88rem !important;
+    }}
+
+    [data-testid="stWidgetLabel"] label, [data-testid="stWidgetLabel"] p, .stSelectbox label, .stSlider label, .stNumberInput label {{
+        color: {theme['text_main']} !important;
+        font-weight: 800 !important;
+        font-size: 0.90rem !important;
     }}
 
     [data-testid="stSidebar"] {{
@@ -315,11 +336,11 @@ st.markdown(f"""
     }}
 
     .hero-subtitle {{
-        color: {theme['text_sub']};
+        color: {theme['text_sub']} !important;
         font-size: 1.05rem;
-        font-weight: 500;
+        font-weight: 600;
         margin-top: 0.6rem;
-        max-width: 920px;
+        max-width: 940px;
         line-height: 1.55;
     }}
 
@@ -388,7 +409,7 @@ st.markdown(f"""
     }}
 
     .metric-title {{
-        font-size: 0.80rem;
+        font-size: 0.82rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: {theme['text_sub']};
@@ -408,7 +429,7 @@ st.markdown(f"""
     }}
 
     .metric-subtext {{
-        font-size: 0.78rem;
+        font-size: 0.80rem;
         color: {theme['text_sub']};
         display: flex;
         align-items: center;
@@ -423,15 +444,15 @@ st.markdown(f"""
         gap: 6px;
         padding: 5px 14px;
         border-radius: 9999px;
-        font-size: 0.76rem;
+        font-size: 0.78rem;
         font-weight: 800;
         letter-spacing: 0.04em;
         text-transform: uppercase;
     }}
-    .badge-low {{ background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); }}
-    .badge-mod {{ background: rgba(245, 158, 11, 0.15); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.35); }}
-    .badge-high {{ background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.35); }}
-    .badge-crit {{ background: rgba(244, 63, 94, 0.2); color: #e11d48; border: 1px solid rgba(244, 63, 94, 0.4); }}
+    .badge-low {{ background: rgba(16, 185, 129, 0.18); color: #059669; border: 1px solid rgba(16, 185, 129, 0.4); }}
+    .badge-mod {{ background: rgba(245, 158, 11, 0.18); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.4); }}
+    .badge-high {{ background: rgba(239, 68, 68, 0.18); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.4); }}
+    .badge-crit {{ background: rgba(244, 63, 94, 0.22); color: #e11d48; border: 1px solid rgba(244, 63, 94, 0.45); }}
 
     /* Custom Glass Panel */
     .glass-panel {{
@@ -447,7 +468,7 @@ st.markdown(f"""
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {{
         gap: 8px;
-        background: {'rgba(255, 255, 255, 0.85)' if not theme['is_dark'] else 'rgba(15, 23, 42, 0.7)'};
+        background: {'rgba(255, 255, 255, 0.92)' if not theme['is_dark'] else 'rgba(15, 23, 42, 0.8)'};
         padding: 6px;
         border-radius: 16px;
         border: 1px solid {theme['card_border']};
@@ -456,8 +477,8 @@ st.markdown(f"""
     .stTabs [data-baseweb="tab"] {{
         padding: 10px 18px;
         border-radius: 11px;
-        color: {theme['text_sub']};
-        font-size: 0.90rem;
+        color: {theme['text_sub']} !important;
+        font-size: 0.92rem;
         font-weight: 700;
         transition: all 0.22s ease;
         border: none !important;
@@ -475,7 +496,7 @@ st.markdown(f"""
         color: #ffffff !important;
         border: none !important;
         border-radius: 12px !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
         padding: 0.6rem 1.4rem !important;
         box-shadow: 0 4px 14px {theme['hero_glow']} !important;
         transition: all 0.2s ease-in-out !important;
@@ -483,6 +504,26 @@ st.markdown(f"""
     .stButton > button:hover {{
         transform: translateY(-2px) !important;
         box-shadow: 0 8px 20px {theme['hero_glow']} !important;
+    }}
+
+    /* Expander High Contrast */
+    [data-testid="stExpander"] details summary span {{
+        color: {theme['text_main']} !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
+    }}
+    [data-testid="stExpander"] [data-testid="stExpanderDetails"] {{
+        background: {theme['card_bg']} !important;
+        border-radius: 12px !important;
+        color: {theme['text_main']} !important;
+    }}
+
+    /* Table & Dataframe Visibility */
+    [data-testid="stDataFrame"], [data-testid="stTable"] {{
+        background: {theme['card_bg']} !important;
+        border-radius: 12px !important;
+        border: 1px solid {theme['card_border']} !important;
+        box-shadow: {theme['card_shadow']} !important;
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -498,8 +539,8 @@ st.markdown(f"""
     </div>
     <h1 class="hero-title">Disaster-Aware Sales Forecasting & Impact Analysis System</h1>
     <p class="hero-subtitle">
-        Bridging the critical gap in demand forecasting: quantifying shock severity, dynamic channel shifts, 
-        and 95% baseline recovery crossing across Pandemics, Climate Agri-Shocks, and Modern AI Job Recessions.
+        Quantifying shock severity, dynamic channel shifts, and 95% baseline recovery crossing across Pandemics, 
+        Climate Agri-Shocks, and Modern AI Job Recessions with Explainable AI.
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -522,10 +563,10 @@ PLOTLY_THEME = dict(
     template=theme['plotly_template'],
     paper_bgcolor=theme['plotly_paper'],
     plot_bgcolor=theme['plotly_plot'],
-    font=dict(family='Plus Jakarta Sans', color=theme['text_sub']),
-    margin=dict(l=15, r=15, t=38, b=15),
-    xaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid']),
-    yaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid'])
+    font=dict(family='Plus Jakarta Sans', color=theme['text_main'], size=12),
+    margin=dict(l=20, r=20, t=42, b=20),
+    xaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid'], tickfont=dict(color=theme['text_sub'])),
+    yaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid'], tickfont=dict(color=theme['text_sub']))
 )
 
 # Filtered Data slice
@@ -554,16 +595,16 @@ with tab1:
 
     if avg_impact_score <= 25:
         risk_badge = '<span class="badge-pill badge-low">● LOW RISK</span>'
-        risk_glow = '#10b981'
+        risk_glow = theme['positive']
     elif avg_impact_score <= 50:
         risk_badge = '<span class="badge-pill badge-mod">● MODERATE RISK</span>'
-        risk_glow = '#f59e0b'
+        risk_glow = theme['warning']
     elif avg_impact_score <= 75:
         risk_badge = '<span class="badge-pill badge-high">● HIGH RISK</span>'
-        risk_glow = '#ef4444'
+        risk_glow = theme['negative']
     else:
         risk_badge = '<span class="badge-pill badge-crit">● CRITICAL RISK</span>'
-        risk_glow = '#f43f5e'
+        risk_glow = theme['negative']
 
     # 5 Executive KPI Glassmorphism Cards
     k1, k2, k3, k4, k5 = st.columns(5)
@@ -645,9 +686,9 @@ with tab1:
 
     with col_v2:
         st.markdown("#### ⚡ Active Disruption Event Registry")
-        st.markdown("""
-        <div class="glass-panel" style="font-size:0.86rem; padding:1.1rem; line-height:1.6;">
-            <b>Calibrated Disruption Signatures:</b>
+        st.markdown(f"""
+        <div class="glass-panel" style="font-size:0.88rem; padding:1.2rem; line-height:1.6; color:{theme['text_main']};">
+            <b style="color:{theme['accent_primary']};">Calibrated Disruption Signatures:</b>
             <ul style="margin:8px 0; padding-left:18px;">
                 <li><b>Pandemic (COVID-19)</b>: Physical shutdown, massive surge in essential online grocery & health.</li>
                 <li><b>Traditional Farming Drought</b>: Mandi arrivals collapse, farmgate loss, AgriTech pivot.</li>
@@ -668,9 +709,27 @@ with tab1:
 # =============================================================================
 with tab2:
     st.markdown("### 📈 Historical Multi-Year Sales & Disruption Event Overlays")
-    st.caption("Tracking multi-horizon sales trajectories against historical disaster windows and Before-During-After phase segmentations.")
+    st.caption("Interactive multi-horizon sales trajectories against historical disaster windows and Before-During-After phase segmentations.")
 
-    ts_total = f_df.groupby('date')['revenue_inr'].sum().reset_index()
+    # Interactive Year Filter
+    c_tl1, c_tl2 = st.columns([1, 3])
+    with c_tl1:
+        year_filter = st.selectbox(
+            "Filter Timeline Horizon",
+            ["Full Timeline (2019-2023)", "2020 (COVID-19 Pandemic)", "2021 (Delta Wave)", "2022 (Floods & Normalization)", "2023 (Agri & AI Recession)"]
+        )
+
+    tl_df = f_df.copy()
+    if year_filter == "2020 (COVID-19 Pandemic)":
+        tl_df = tl_df[tl_df['year'] == 2020]
+    elif year_filter == "2021 (Delta Wave)":
+        tl_df = tl_df[tl_df['year'] == 2021]
+    elif year_filter == "2022 (Floods & Normalization)":
+        tl_df = tl_df[tl_df['year'] == 2022]
+    elif year_filter == "2023 (Agri & AI Recession)":
+        tl_df = tl_df[tl_df['year'] == 2023]
+
+    ts_total = tl_df.groupby('date')['revenue_inr'].sum().reset_index()
     
     fig_ts = go.Figure()
     
@@ -678,9 +737,10 @@ with tab2:
     fig_ts.add_trace(go.Scatter(
         x=ts_total['date'],
         y=ts_total['revenue_inr'],
-        mode='lines',
+        mode='lines+markers',
         name='Weekly Sales (INR)',
-        line=dict(color=theme['plotly_line'], width=2.5),
+        line=dict(color=theme['plotly_line'], width=2.5, shape='spline'),
+        marker=dict(size=4),
         fill='tozeroy',
         fillcolor='rgba(16, 185, 129, 0.08)' if not theme['is_dark'] else 'rgba(0, 245, 155, 0.08)'
     ))
@@ -690,25 +750,26 @@ with tab2:
         s_date = pd.to_datetime(dis['start_date'])
         e_date = pd.to_datetime(dis['end_date'])
         
-        fill = "rgba(244, 63, 94, 0.15)"
-        if 'Farming' in dis['disaster_type']:
-            fill = "rgba(245, 158, 11, 0.18)"
-        elif 'AI' in dis['disaster_type']:
-            fill = "rgba(139, 92, 246, 0.18)"
-            
-        fig_ts.add_vrect(
-            x0=s_date, x1=e_date,
-            fillcolor=fill, opacity=0.8,
-            layer="below", line_width=0,
-            annotation_text=dis['disaster_name'],
-            annotation_position="top left",
-            annotation_font_size=9,
-            annotation_font_color=theme['text_sub']
-        )
+        if (ts_total['date'].min() <= e_date) and (ts_total['date'].max() >= s_date):
+            fill = "rgba(244, 63, 94, 0.16)"
+            if 'Farming' in dis['disaster_type']:
+                fill = "rgba(245, 158, 11, 0.20)"
+            elif 'AI' in dis['disaster_type']:
+                fill = "rgba(139, 92, 246, 0.20)"
+                
+            fig_ts.add_vrect(
+                x0=max(s_date, ts_total['date'].min()), x1=min(e_date, ts_total['date'].max()),
+                fillcolor=fill, opacity=0.8,
+                layer="below", line_width=0,
+                annotation_text=dis['disaster_name'],
+                annotation_position="top left",
+                annotation_font_size=10,
+                annotation_font_color=theme['text_main']
+            )
 
     fig_ts.update_layout(
         **PLOTLY_THEME,
-        title="Weekly Sales Trajectory (2019-2023) with Historical Disruption Intervals",
+        title=f"Weekly Sales Trajectory ({year_filter}) with Active Disruption Intervals",
         height=420,
         hovermode="x unified"
     )
@@ -723,8 +784,8 @@ with tab2:
         target_event = disasters_df[disasters_df['disaster_name'] == dis_choice].iloc[0]
         
         st.markdown(f"""
-        <div class="glass-panel" style="font-size:0.85rem;">
-            <div style="font-weight:700; color:{theme['text_main']}; margin-bottom:8px;">{target_event['disaster_name']}</div>
+        <div class="glass-panel" style="font-size:0.88rem; color:{theme['text_main']};">
+            <div style="font-weight:800; font-size:1.05rem; color:{theme['accent_primary']}; margin-bottom:8px;">{target_event['disaster_name']}</div>
             • <b>Type:</b> {target_event['disaster_type']}<br>
             • <b>Dates:</b> {target_event['start_date']} ➔ {target_event['end_date']}<br>
             • <b>Duration:</b> {target_event['duration_days']} days<br>
@@ -772,7 +833,7 @@ with tab2:
             """, unsafe_allow_html=True)
 
         st.markdown(f"""
-        <div style="background:rgba(244, 63, 94, 0.08); border:1px solid rgba(244, 63, 94, 0.2); border-radius:10px; padding:10px 14px; margin-top:12px; font-size:0.82rem; color:#fca5a5;">
+        <div style="background:{'rgba(244, 63, 94, 0.10)' if not theme['is_dark'] else 'rgba(255, 51, 102, 0.12)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 16px; margin-top:14px; font-size:0.86rem; color:{theme['text_main']};">
             💡 <b>Estimated Cumulative Revenue Deviation:</b> ₹{phase_analysis['revenue_deviation_inr']:,.0f} | <b>Target Recovery Threshold:</b> ₹{phase_analysis['recovery_threshold_inr']:,.0f}/week
         </div>
         """, unsafe_allow_html=True)
@@ -797,11 +858,11 @@ with tab3:
         </div>
         <div style="display:flex; gap:30px; text-align:right;">
             <div>
-                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:600;">Out-of-Time R² Score</div>
+                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:700;">Out-of-Time R² Score</div>
                 <div style="font-family:'JetBrains Mono', monospace; font-size:1.35rem; font-weight:800; color:{theme['positive']};">0.9430</div>
             </div>
             <div>
-                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:600;">Mean Error (MAPE)</div>
+                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:700;">Mean Error (MAPE)</div>
                 <div style="font-family:'JetBrains Mono', monospace; font-size:1.35rem; font-weight:800; color:{theme['accent_secondary']};">6.64%</div>
             </div>
         </div>
@@ -866,11 +927,69 @@ with tab4:
     st.markdown("### ⚡ Interactive What-If Scenario Simulator & Risk Engine")
     st.caption("Simulate real-time operational shocks, adjust disaster parameters, and evaluate demand response & recovery timelines.")
 
+    # Interactive One-Click Scenario Presets Bar
+    st.markdown("<p style='font-size:0.85rem; font-weight:800; margin-bottom:8px;'>⚡ One-Click Shock Presets:</p>", unsafe_allow_html=True)
+    cp1, cp2, cp3, cp4, cp5 = st.columns(5)
+    
+    if "sim_sev" not in st.session_state:
+        st.session_state.sim_sev = 7.5
+        st.session_state.sim_dur = 45
+        st.session_state.sim_sup = 0.80
+        st.session_state.sim_eco = 0.65
+        st.session_state.sim_mob = 60
+        st.session_state.sim_dis_idx = 0
+
+    if cp1.button("🦠 COVID-19 Wave 2"):
+        st.session_state.sim_sev = 9.0
+        st.session_state.sim_dur = 60
+        st.session_state.sim_sup = 0.90
+        st.session_state.sim_eco = 0.85
+        st.session_state.sim_mob = 80
+        st.session_state.sim_dis_idx = 0
+        st.rerun()
+
+    if cp2.button("🌾 Monsoon Agri Shock"):
+        st.session_state.sim_sev = 8.0
+        st.session_state.sim_dur = 90
+        st.session_state.sim_sup = 0.85
+        st.session_state.sim_eco = 0.55
+        st.session_state.sim_mob = 35
+        st.session_state.sim_dis_idx = 2
+        st.rerun()
+
+    if cp3.button("💻 AI Tech Freeze"):
+        st.session_state.sim_sev = 7.0
+        st.session_state.sim_dur = 120
+        st.session_state.sim_sup = 0.25
+        st.session_state.sim_eco = 0.80
+        st.session_state.sim_mob = 25
+        st.session_state.sim_dis_idx = 3
+        st.rerun()
+
+    if cp4.button("🌪️ Cyclone Biparjoy"):
+        st.session_state.sim_sev = 8.5
+        st.session_state.sim_dur = 20
+        st.session_state.sim_sup = 0.95
+        st.session_state.sim_eco = 0.70
+        st.session_state.sim_mob = 85
+        st.session_state.sim_dis_idx = 1
+        st.rerun()
+
+    if cp5.button("🟢 Reset to Normal"):
+        st.session_state.sim_sev = 0.0
+        st.session_state.sim_dur = 1
+        st.session_state.sim_sup = 0.0
+        st.session_state.sim_eco = 0.0
+        st.session_state.sim_mob = 0
+        st.session_state.sim_dis_idx = 0
+        st.rerun()
+
+    st.markdown("<br>", unsafe_allow_html=True)
     sim_col1, sim_col2 = st.columns([1, 1])
 
     with sim_col1:
         st.markdown("#### 🎛️ Scenario Business Profile")
-        sim_disaster_type = st.selectbox("Disruption / Disaster Event Type", DISASTER_TYPES, index=0)
+        sim_disaster_type = st.selectbox("Disruption / Disaster Event Type", DISASTER_TYPES, index=st.session_state.sim_dis_idx)
         sim_region = st.selectbox("Geographic Market", ['Maharashtra', 'Delhi NCR', 'Karnataka', 'West Bengal', 'Gujarat', 'Odisha'], index=0)
         sim_category = st.selectbox("Product Sector / Industry", list(INDUSTRY_SENSITIVITY.keys()), index=0)
         sim_channel = st.selectbox("Fulfillment Strategy", ['Offline Store / Mandi', 'Online Platform / AgriTech / D2C'], index=0)
@@ -878,11 +997,11 @@ with tab4:
 
     with sim_col2:
         st.markdown("#### 🌪️ Exogenous Shock Controls")
-        sim_severity = st.slider("Disaster Severity Shock (0 - 10)", 0.0, 10.0, 7.5, 0.5)
-        sim_duration = st.slider("Disruption Duration (Days)", 1, 180, 45, 5)
-        sim_supply_shock = st.slider("Supply Chain / Mandi Logistics Disruption (0 - 1.0)", 0.0, 1.0, 0.80, 0.05)
-        sim_econ_shock = st.slider("Economic Shock / Layoff Sentiment (0 - 1.0)", 0.0, 1.0, 0.65, 0.05)
-        sim_mobility_drop = st.slider("Mobility Reduction / Footfall Drop (%)", 0, 100, 60, 5)
+        sim_severity = st.slider("Disaster Severity Shock (0 - 10)", 0.0, 10.0, float(st.session_state.sim_sev), 0.5)
+        sim_duration = st.slider("Disruption Duration (Days)", 1, 180, int(st.session_state.sim_dur), 5)
+        sim_supply_shock = st.slider("Supply Chain / Mandi Logistics Disruption (0 - 1.0)", 0.0, 1.0, float(st.session_state.sim_sup), 0.05)
+        sim_econ_shock = st.slider("Economic Shock / Layoff Sentiment (0 - 1.0)", 0.0, 1.0, float(st.session_state.sim_eco), 0.05)
+        sim_mobility_drop = st.slider("Mobility Reduction / Footfall Drop (%)", 0, 100, int(st.session_state.sim_mob), 5)
 
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -907,6 +1026,64 @@ with tab4:
         disaster_severity=9.0, disaster_duration_days=60, supply_disruption_index=0.90, economic_disruption_index=0.85,
         geographic_spread_index=0.90, population_affected_index=0.85, mobility_reduction_pct=80.0, baseline_revenue=float(sim_baseline_rev)
     )
+
+    # Gauge & Elasticity Curve Row
+    c_gauge, c_curve = st.columns([1, 2])
+    with c_gauge:
+        st.markdown("#### 🛡️ Live Impact Score Gauge")
+        fig_gauge = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=sim_result['impact_score'],
+            title={'text': "Composite Risk Index", 'font': {'size': 16, 'color': theme['text_main']}},
+            gauge={
+                'axis': {'range': [0, 100], 'tickcolor': theme['text_sub']},
+                'bar': {'color': theme['accent_primary']},
+                'steps': [
+                    {'range': [0, 25], 'color': 'rgba(16, 185, 129, 0.25)'},
+                    {'range': [25, 50], 'color': 'rgba(245, 158, 11, 0.25)'},
+                    {'range': [50, 75], 'color': 'rgba(239, 68, 68, 0.25)'},
+                    {'range': [75, 100], 'color': 'rgba(244, 63, 94, 0.35)'}
+                ],
+                'threshold': {
+                    'line': {'color': "red", 'width': 4},
+                    'thickness': 0.75,
+                    'value': sim_result['impact_score']
+                }
+            }
+        ))
+        fig_gauge.update_layout(**PLOTLY_THEME, height=270)
+        st.plotly_chart(fig_gauge, use_container_width=True)
+
+    with c_curve:
+        st.markdown("#### 📉 Interactive Demand Elasticity Curve (0-10 Shock)")
+        sev_range = np.linspace(0, 10, 21)
+        curve_preds = []
+        for s in sev_range:
+            p = predict_scenario(
+                region=sim_region, category=sim_category, channel=sim_channel, disaster_type=sim_disaster_type,
+                disaster_severity=float(s), disaster_duration_days=sim_duration, supply_disruption_index=sim_supply_shock,
+                economic_disruption_index=sim_econ_shock, geographic_spread_index=0.60, population_affected_index=0.55,
+                mobility_reduction_pct=float(sim_mobility_drop), baseline_revenue=float(sim_baseline_rev), model_name='xgboost'
+            )
+            curve_preds.append(p['predicted_revenue'])
+        
+        curve_df = pd.DataFrame({'Severity': sev_range, 'Predicted_Sales': curve_preds})
+        fig_curve = px.line(
+            curve_df, x='Severity', y='Predicted_Sales',
+            title=f"Sales Elasticity Response Curve: {sim_category}",
+            labels={'Severity': 'Disaster Severity Shock (0 to 10)', 'Predicted_Sales': 'Weekly Demand (INR)'}
+        )
+        fig_curve.update_traces(line=dict(color=theme['accent_secondary'], width=3, shape='spline'))
+        fig_curve.add_trace(go.Scatter(
+            x=[sim_severity], y=[sim_result['predicted_revenue']],
+            mode='markers+text',
+            name='Current Scenario',
+            text=["Active Simulation"],
+            textposition="top right",
+            marker=dict(size=12, color=theme['accent_primary'], symbol='diamond')
+        ))
+        fig_curve.update_layout(**PLOTLY_THEME, height=270)
+        st.plotly_chart(fig_curve, use_container_width=True)
 
     st.markdown("#### 📊 Multi-Scenario Comparative Outlook (Normal vs Moderate vs Severe)")
     scenario_table = pd.DataFrame([
@@ -945,6 +1122,34 @@ with tab4:
     ])
     st.table(scenario_table)
 
+    # Interactive Export Controls
+    c_d1, c_d2 = st.columns(2)
+    with c_d1:
+        st.download_button(
+            label="📥 Download Scenario Comparison (CSV)",
+            data=scenario_table.to_csv(index=False),
+            file_name=f"scenario_simulation_{sim_region}_{sim_category}.csv",
+            mime="text/csv"
+        )
+    with c_d2:
+        sim_summary_text = f"""# Executive Disruption Scenario Summary
+- Region: {sim_region}
+- Industry: {sim_category}
+- Channel: {sim_channel}
+- Shock Severity: {sim_severity}/10
+- Disruption Score: {sim_result['impact_score']}/100 ({sim_result['risk_level']} Risk)
+- Normal Baseline Sales: INR {sim_baseline_rev:,.0f}
+- Realized Disruption Sales: INR {sim_result['predicted_revenue']:,.0f} (Impact: {sim_result['impact_percentage']}%)
+- Recovery Target: {sim_result['estimated_recovery_weeks']} weeks
+"""
+        st.download_button(
+            label="📄 Download Scenario Report (Markdown)",
+            data=sim_summary_text,
+            file_name=f"disruption_report_{sim_region}.md",
+            mime="text/markdown"
+        )
+
+    st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("#### 💡 Strategic Business Mitigation Actions")
     if sim_result['risk_level'] in ['High', 'Critical']:
         st.error(f"🚨 **High/Critical Operational Risk Alert**: Expected sales drop of **{sim_result['impact_percentage']}%**. Action plan: Rapidly pivot inventory to Direct-to-Consumer / Online channels, activate alternate freight corridors, and shape demand via dynamic regional pricing.")
@@ -964,7 +1169,7 @@ with tab5:
 
     st.markdown(f"""
     <div class="glass-panel" style="border-left:4px solid {theme['accent_primary']};">
-        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:{theme['accent_primary']}; font-weight:800;">Executive Diagnostic Summary</div>
+        <div style="font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em; color:{theme['accent_primary']}; font-weight:800;">Executive Diagnostic Summary</div>
         <div style="font-size:1.15rem; font-weight:700; color:{theme['text_main']}; margin:6px 0;">{narrative['headline']}</div>
     </div>
     """, unsafe_allow_html=True)
@@ -1027,9 +1232,9 @@ with tab6:
 
     with f_col1:
         st.markdown("#### 🌾 Traditional Farming & Agri Disruption")
-        st.markdown("""
-        <div class="glass-panel" style="font-size:0.86rem; line-height:1.6;">
-            <b>Dynamics of Agricultural Disruption:</b>
+        st.markdown(f"""
+        <div class="glass-panel" style="font-size:0.88rem; line-height:1.6; color:{theme['text_main']};">
+            <b style="color:{theme['accent_primary']};">Dynamics of Agricultural Disruption:</b>
             <ul style="margin:8px 0; padding-left:18px;">
                 <li><b>Monsoon Deficit & Hail</b>: APMC Mandi arrivals collapse (-40% to -65%), causing severe farmgate loss.</li>
                 <li><b>AgriTech & D2C Surge</b>: Direct farm-to-consumer and AgriTech platforms boom (+45% to +65%).</li>
@@ -1050,9 +1255,9 @@ with tab6:
 
     with f_col2:
         st.markdown("#### 💻 Modern AI Job Recession & Tech Layoffs")
-        st.markdown("""
-        <div class="glass-panel" style="font-size:0.86rem; line-height:1.6;">
-            <b>Dynamics of Modern AI Recession:</b>
+        st.markdown(f"""
+        <div class="glass-panel" style="font-size:0.88rem; line-height:1.6; color:{theme['text_main']};">
+            <b style="color:{theme['accent_primary']};">Dynamics of Modern AI Recession:</b>
             <ul style="margin:8px 0; padding-left:18px;">
                 <li><b>White-Collar Freeze</b>: Tech layoffs in Bengaluru/NCR trigger sharp contraction in Luxury Apparel (-35%) & Dine-in (-45%).</li>
                 <li><b>Upskilling Surge</b>: Direct boom in AI & Prompt Engineering bootcamps (+130%).</li>
@@ -1098,33 +1303,48 @@ with tab7:
         st.plotly_chart(fig_survey, use_container_width=True)
 
     with col_sv2:
-        st.markdown("#### 🎓 Viva Voce Academic Defense Guide")
+        st.markdown("#### 🎓 Interactive Viva Voce Academic Defense Guide")
+        
         with st.expander("❓ Q1: Why is ordinary sales forecasting not enough?", expanded=True):
-            st.write("""
-            **Answer**: Ordinary forecasting relies solely on historical sales sequences, implicitly assuming future demand behaves like the past. External disruptions invalidate this assumption. Our system explicitly incorporates disaster severity, duration, supply bottlenecks, and consumer sentiment signals as exogenous features.
-            """)
+            st.markdown(f"""
+            <div style="color:{theme['text_main']}; line-height:1.6;">
+            <b>Core Examiner Question</b>: Standard time-series models (ARIMA, Prophet) assume stationarity and historical pattern recurrence.<br><br>
+            <b>Defensive Response</b>: External disruptions (Pandemics, Cyclones, Agri Shocks, Layoffs) create sudden structural breaks. Our system explicitly ingests <b>exogenous disruption vectors</b> ($S, D, U, E, G, P$) and category sensitivity ($\\gamma_c$) to model rapid channel pivots and demand elasticity.
+            </div>
+            """, unsafe_allow_html=True)
 
         with st.expander("❓ Q2: How did you prevent Data Leakage?"):
-            st.write("""
-            **Answer**: We strictly enforced **Time-Based Splitting** (Training on 2019–2022, Testing on unseen 2023). We never used random k-fold shuffling. All lag features and rolling aggregations use `shift(1)` so future data is never leaked.
-            """)
+            st.markdown(f"""
+            <div style="color:{theme['text_main']}; line-height:1.6;">
+            <b>Core Examiner Question</b>: Did you shuffle data or leak future values into historical rolling lags?<br><br>
+            <b>Defensive Response</b>: We enforced a strict <b>Time-Based Split</b> (2019–2022 Training, 2023 Out-of-Time Test Set). All rolling averages ($4w, 8w, 12w$) and lag features ($L_1, L_2, L_4, L_8$) use <code>shift(1)</code>, ensuring zero future observation leakage.
+            </div>
+            """, unsafe_allow_html=True)
 
         with st.expander("❓ Q3: How is the 0-100 Disaster Impact Score defended?"):
-            st.write("""
-            **Answer**: The Disaster Impact Score is a **transparent, project-defined composite index**. We normalize operational disruption factors (Severity 25%, Supply Disruption 25%, Duration 15%, Economic Disruption 15%, Geographic Spread 10%, Population 10%) summing to 1.00, modulated by industry sensitivity.
-            """)
+            st.markdown(f"""
+            <div style="color:{theme['text_main']}; line-height:1.6;">
+            <b>Core Examiner Question</b>: Is the Disaster Impact Score arbitrary or mathematically grounded?<br><br>
+            <b>Defensive Response</b>: It is a <b>transparent normalized composite index</b> defined as:
+            $$\\text{{DIS}} = \\left( 0.25 \\frac{{S}}{{10}} + 0.25 U + 0.15 \\frac{{D}}{{180}} + 0.15 E + 0.10 G + 0.10 P \\right) \\times 100 \\times \\gamma_c$$
+            Weights sum to 1.00 and each factor has a verifiable physical or economic counterpart.
+            </div>
+            """, unsafe_allow_html=True)
 
         with st.expander("❓ Q4: What is the relationship between Survey Data and Sales Data?"):
-            st.write("""
-            **Answer**: Survey data (BCG Wave 1, N=2,106) captures **stated consumer intentions/sentiment** (e.g. 55% shifting to online electronics). Sales data captures **actual realized transactions**. The survey is converted into an external behavioral feature (`survey_channel_shift_pct`) feeding the ML model.
-            """)
+            st.markdown(f"""
+            <div style="color:{theme['text_main']}; line-height:1.6;">
+            <b>Core Examiner Question</b>: How do you bridge stated consumer sentiment with actual transaction volumes?<br><br>
+            <b>Defensive Response</b>: The <b>BCG India COVID-19 Survey ($N=2,106$)</b> captures stated behavioral intentions (e.g. 55% online channel shift in electronics). We engineer <code>survey_channel_shift_pct</code> as a behavioral signal feature that modulates channel-level sales predictions.
+            </div>
+            """, unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
 # Footer
 # -----------------------------------------------------------------------------
-st.markdown("<hr style='border-color:rgba(255,255,255,0.06); margin:2rem 0 1rem 0;'>", unsafe_allow_html=True)
+st.markdown("<hr style='border-color:rgba(0,0,0,0.08); margin:2rem 0 1rem 0;'>", unsafe_allow_html=True)
 st.markdown(
-    "<div style='text-align:center; color:#64748b; font-size:0.82rem;'>"
+    f"<div style='text-align:center; color:{theme['text_sub']}; font-size:0.84rem; font-weight:600;'>"
     "🛡️ Disaster-Aware Sales Forecasting OS • Enterprise Decision Intelligence System • 2026"
     "</div>",
     unsafe_allow_html=True
