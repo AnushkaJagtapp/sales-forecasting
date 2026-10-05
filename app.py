@@ -40,17 +40,17 @@ st.set_page_config(
 )
 
 # -----------------------------------------------------------------------------
-# Curated Modern Color Themes
+# Curated High-Contrast Modern Color Themes
 # -----------------------------------------------------------------------------
 THEMES = {
     "🌿 Fresh Nordic Mint (Emerald & Teal)": {
         "is_dark": False,
-        "bg_main": "#f2f8f5",
+        "bg_main": "#f0f8f4",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
         "card_border": "rgba(5, 150, 105, 0.28)",
-        "card_shadow": "0 10px 25px -4px rgba(5, 150, 105, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
-        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #ebfbf3 100%)",
+        "card_shadow": "0 8px 24px -4px rgba(5, 150, 105, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.05)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #e6f7ef 100%)",
         "accent_primary": "#059669",
         "accent_secondary": "#0284c7",
         "accent_tertiary": "#4f46e5",
@@ -59,6 +59,7 @@ THEMES = {
         "negative": "#e11d48",
         "text_main": "#09101d",
         "text_sub": "#27364b",
+        "sidebar_text": "#09101d",
         "gradient_hero": "linear-gradient(135deg, #059669 0%, #0284c7 50%, #4f46e5 100%)",
         "hero_glow": "rgba(5, 150, 105, 0.16)",
         "kpi_top_border": "linear-gradient(90deg, #059669, #0284c7)",
@@ -72,12 +73,12 @@ THEMES = {
     },
     "💎 Arctic Cobalt (Clean Tech Blue)": {
         "is_dark": False,
-        "bg_main": "#eff5fc",
+        "bg_main": "#eef5fc",
         "sidebar_bg": "#ffffff",
         "card_bg": "#ffffff",
         "card_border": "rgba(37, 99, 235, 0.26)",
-        "card_shadow": "0 10px 25px -4px rgba(37, 99, 235, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04)",
-        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #eaf2fd 100%)",
+        "card_shadow": "0 8px 24px -4px rgba(37, 99, 235, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.05)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #e8f2fe 100%)",
         "accent_primary": "#2563eb",
         "accent_secondary": "#0284c7",
         "accent_tertiary": "#7c3aed",
@@ -86,6 +87,7 @@ THEMES = {
         "negative": "#e11d48",
         "text_main": "#09101d",
         "text_sub": "#27364b",
+        "sidebar_text": "#09101d",
         "gradient_hero": "linear-gradient(135deg, #2563eb 0%, #0284c7 50%, #7c3aed 100%)",
         "hero_glow": "rgba(37, 99, 235, 0.16)",
         "kpi_top_border": "linear-gradient(90deg, #2563eb, #0284c7)",
@@ -96,6 +98,34 @@ THEMES = {
         "plotly_plot": "#f6f9fc",
         "plotly_grid": "rgba(0,0,0,0.08)",
         "chart_colors": ["#2563eb", "#0284c7", "#7c3aed", "#10b981", "#d97706", "#e11d48"]
+    },
+    "🌸 Vibrant Coral Bloom (Rose & Amber)": {
+        "is_dark": False,
+        "bg_main": "#fdf2f4",
+        "sidebar_bg": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "rgba(225, 29, 72, 0.25)",
+        "card_shadow": "0 8px 24px -4px rgba(225, 29, 72, 0.10), 0 2px 6px -1px rgba(0, 0, 0, 0.05)",
+        "hero_bg": "linear-gradient(135deg, #ffffff 0%, #fde8ed 100%)",
+        "accent_primary": "#e11d48",
+        "accent_secondary": "#d97706",
+        "accent_tertiary": "#7c3aed",
+        "positive": "#10b981",
+        "warning": "#d97706",
+        "negative": "#e11d48",
+        "text_main": "#1e0f14",
+        "text_sub": "#3f232c",
+        "sidebar_text": "#1e0f14",
+        "gradient_hero": "linear-gradient(135deg, #e11d48 0%, #d97706 50%, #7c3aed 100%)",
+        "hero_glow": "rgba(225, 29, 72, 0.16)",
+        "kpi_top_border": "linear-gradient(90deg, #e11d48, #d97706)",
+        "btn_gradient": "linear-gradient(135deg, #e11d48 0%, #d97706 100%)",
+        "plotly_line": "#e11d48",
+        "plotly_template": "plotly_white",
+        "plotly_paper": "#ffffff",
+        "plotly_plot": "#fdf5f7",
+        "plotly_grid": "rgba(0,0,0,0.08)",
+        "chart_colors": ["#e11d48", "#d97706", "#7c3aed", "#10b981", "#0284c7", "#4f46e5"]
     },
     "🌙 Deep Cyber Onyx (Dark Theme)": {
         "is_dark": True,
@@ -112,7 +142,8 @@ THEMES = {
         "warning": "#fbbf24",
         "negative": "#f87171",
         "text_main": "#f8fafc",
-        "text_sub": "#94a3b8",
+        "text_sub": "#cbd5e1",
+        "sidebar_text": "#f8fafc",
         "gradient_hero": "linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%)",
         "hero_glow": "rgba(56, 189, 248, 0.22)",
         "kpi_top_border": "linear-gradient(90deg, #38bdf8, #818cf8)",
@@ -156,29 +187,50 @@ prep_report = st.session_state['prep_report']
 # Load metrics
 eval_metrics = {}
 if os.path.exists("models/evaluation_metrics.json"):
-    with open("models/evaluation_metrics.json", "r") as f:
-        eval_metrics = json.load(f)
+    try:
+        with open("models/evaluation_metrics.json", "r") as f:
+            eval_metrics = json.load(f)
+    except Exception:
+        pass
+
+# -----------------------------------------------------------------------------
+# Currency & Metric Formatting Helper
+# -----------------------------------------------------------------------------
+def format_inr(val, compact=True):
+    """Formats numeric value to clean INR string without line breaks."""
+    if val is None or np.isnan(val):
+        return "₹0"
+    abs_val = abs(val)
+    sign = "-" if val < 0 else ""
+    if compact:
+        if abs_val >= 10000000:  # 1 Crore
+            return f"{sign}₹{abs_val / 10000000:,.2f} Cr"
+        elif abs_val >= 100000:  # 1 Lakh
+            return f"{sign}₹{abs_val / 100000:,.2f} L"
+        else:
+            return f"{sign}₹{abs_val:,.0f}"
+    return f"{sign}₹{abs_val:,.0f}"
 
 # -----------------------------------------------------------------------------
 # Sidebar Navigation & Visual Style
 # -----------------------------------------------------------------------------
 with st.sidebar:
     st.markdown("""
-    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px; padding:4px 0;">
-        <div style="background:linear-gradient(135deg, #059669, #0284c7); width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 6px 16px rgba(5, 150, 105, 0.35);">⚡</div>
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px; padding:6px 0;">
+        <div style="background:linear-gradient(135deg, #059669, #0284c7); width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 6px 16px rgba(5, 150, 105, 0.35); flex-shrink:0;">⚡</div>
         <div>
-            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.25rem; font-weight:800; line-height:1.1;">DISASTER AI</div>
-            <div style="font-size:0.75rem; opacity:0.85; letter-spacing:0.06em; font-weight:700;">SALES FORECAST OS</div>
+            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.25rem; font-weight:800; line-height:1.1; letter-spacing:-0.02em;">DISASTER AI</div>
+            <div style="font-size:0.75rem; letter-spacing:0.06em; font-weight:700; opacity:0.85;">SALES FORECAST OS</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; margin-bottom:4px;'>🎨 Theme</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.80rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; margin-bottom:6px;'>🎨 Theme</p>", unsafe_allow_html=True)
     selected_theme_name = st.selectbox("Color Theme", list(THEMES.keys()), index=0, label_visibility="collapsed")
     theme = THEMES[selected_theme_name]
 
     st.markdown("<hr style='opacity:0.18; margin:0.9rem 0;'>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; margin-bottom:4px;'>📍 Global Data Scope Filters</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.80rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; margin-bottom:6px;'>📍 Global Data Scope Filters</p>", unsafe_allow_html=True)
     
     all_regions = ['All Regions'] + (sorted(sales_df['region'].unique().tolist()) if 'region' in sales_df.columns else [])
     selected_region = st.selectbox("Market Region", all_regions, index=0)
@@ -191,15 +243,16 @@ with st.sidebar:
 
     st.markdown("<hr style='opacity:0.18; margin:0.9rem 0;'>", unsafe_allow_html=True)
     st.markdown(f"""
-    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.05)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:10px 12px; font-size:0.80rem; color:{theme['text_sub']}; line-height:1.45;">
-        <b>Active Dataset:</b> {st.session_state.get('data_source', 'Default')}<br>
+    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.06)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 14px; font-size:0.82rem; color:{theme['text_sub']}; line-height:1.5;">
+        <span style="font-weight:800; color:{theme['accent_primary']};">Dataset Status:</span><br>
+        <b>Source:</b> {st.session_state.get('data_source', 'Default')}<br>
         <b>Total Records:</b> {len(sales_df):,}<br>
         <b>Strict ML Validation:</b> 0% Data Leakage
     </div>
     """, unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# CSS Styling Injection
+# CSS Styling Injection with High-Contrast Streamlit Cloud Guarantees
 # -----------------------------------------------------------------------------
 st.markdown(f"""
 <style>
@@ -216,11 +269,37 @@ st.markdown(f"""
                     {theme['bg_main']} !important;
     }}
 
+    /* Global Headings */
     h1, h2, h3, h4, h5, h6 {{
         color: {theme['text_main']} !important;
         font-family: 'Space Grotesk', sans-serif !important;
         font-weight: 800 !important;
         letter-spacing: -0.01em !important;
+    }}
+
+    p, span, div, label {{
+        color: {theme['text_main']};
+    }}
+
+    /* High-Contrast Sidebar Rules for Streamlit Cloud */
+    [data-testid="stSidebar"] {{
+        background-color: {theme['sidebar_bg']} !important;
+        border-right: 1px solid {theme['card_border']};
+    }}
+    
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] div,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {{
+        color: {theme['sidebar_text']} !important;
+        font-weight: 700 !important;
+    }}
+
+    [data-testid="stWidgetLabel"] label, [data-testid="stWidgetLabel"] p {{
+        color: {theme['text_main']} !important;
+        font-weight: 700 !important;
+        font-size: 0.88rem !important;
     }}
 
     .stCaption, [data-testid="stCaptionContainer"] p {{
@@ -229,11 +308,7 @@ st.markdown(f"""
         font-size: 0.88rem !important;
     }}
 
-    [data-testid="stSidebar"] {{
-        background-color: {theme['sidebar_bg']} !important;
-        border-right: 1px solid {theme['card_border']};
-    }}
-
+    /* Top Hero Header */
     .hero-container {{
         position: relative;
         background: {theme['hero_bg']};
@@ -255,7 +330,7 @@ st.markdown(f"""
 
     .hero-title {{
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 2.1rem;
+        font-size: 2.15rem;
         font-weight: 800;
         letter-spacing: -0.025em;
         background: {theme['gradient_hero']};
@@ -269,7 +344,7 @@ st.markdown(f"""
         color: {theme['text_sub']} !important;
         font-size: 0.98rem;
         font-weight: 600;
-        margin-top: 0.45rem;
+        margin-top: 0.5rem;
         max-width: 960px;
         line-height: 1.5;
     }}
@@ -298,15 +373,22 @@ st.markdown(f"""
         box-shadow: 0 0 10px {theme['positive']};
     }}
 
+    /* Enterprise Glass & Solid KPI Cards */
     .metric-card-lux {{
         background: {theme['card_bg']};
         border: 1px solid {theme['card_border']};
         border-radius: 14px;
-        padding: 1.2rem 1.15rem;
+        padding: 1.15rem 1.10rem;
         position: relative;
         backdrop-filter: blur(12px);
         box-shadow: {theme['card_shadow']};
         margin-bottom: 0.6rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }}
+
+    .metric-card-lux:hover {{
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px -4px {theme['hero_glow']};
     }}
 
     .metric-card-lux::before {{
@@ -317,7 +399,7 @@ st.markdown(f"""
     }}
 
     .metric-title {{
-        font-size: 0.80rem;
+        font-size: 0.78rem;
         text-transform: uppercase;
         letter-spacing: 0.07em;
         color: {theme['text_sub']};
@@ -329,26 +411,33 @@ st.markdown(f"""
 
     .metric-number {{
         font-family: 'JetBrains Mono', monospace;
-        font-size: 1.7rem;
+        font-size: clamp(1.15rem, 1.40vw, 1.55rem);
         font-weight: 800;
-        margin-top: 0.4rem;
+        margin-top: 0.35rem;
         margin-bottom: 0.2rem;
         letter-spacing: -0.02em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }}
 
     .metric-subtext {{
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         color: {theme['text_sub']};
         font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }}
 
+    /* Fresh Badge Pills */
     .badge-pill {{
         display: inline-flex;
         align-items: center;
         gap: 6px;
         padding: 4px 12px;
         border-radius: 9999px;
-        font-size: 0.76rem;
+        font-size: 0.75rem;
         font-weight: 800;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -358,29 +447,59 @@ st.markdown(f"""
     .badge-high {{ background: rgba(239, 68, 68, 0.18); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.4); }}
     .badge-crit {{ background: rgba(244, 63, 94, 0.22); color: #e11d48; border: 1px solid rgba(244, 63, 94, 0.45); }}
 
+    /* Streamlit Tabs Navigation Bar */
     .stTabs [data-baseweb="tab-list"] {{
         gap: 6px;
-        background: {'rgba(255, 255, 255, 0.95)' if not theme['is_dark'] else 'rgba(15, 23, 42, 0.85)'};
+        background: {'rgba(255, 255, 255, 0.96)' if not theme['is_dark'] else 'rgba(15, 23, 42, 0.90)'};
         padding: 6px;
         border-radius: 14px;
         border: 1px solid {theme['card_border']};
         box-shadow: {theme['card_shadow']};
     }}
-    .stTabs [data-baseweb="tab"] {{
-        padding: 9px 16px;
+    .stTabs [data-baseweb="tab"],
+    .stTabs [data-baseweb="tab"] p,
+    .stTabs [data-baseweb="tab"] div,
+    .stTabs [data-baseweb="tab"] span {{
+        padding: 8px 16px;
         border-radius: 10px;
-        color: {theme['text_sub']} !important;
-        font-size: 0.90rem;
-        font-weight: 700;
+        color: {theme['text_main']} !important;
+        font-size: 0.90rem !important;
+        font-weight: 700 !important;
         border: none !important;
-        background: transparent !important;
+        background: transparent;
+        transition: all 0.2s ease;
     }}
-    .stTabs [aria-selected="true"] {{
+    .stTabs [aria-selected="true"],
+    .stTabs [aria-selected="true"] p,
+    .stTabs [aria-selected="true"] div,
+    .stTabs [aria-selected="true"] span {{
         background: {theme['gradient_hero']} !important;
         color: #ffffff !important;
+        border-radius: 10px !important;
         box-shadow: 0 4px 14px {theme['hero_glow']};
     }}
 
+    /* Native Streamlit Metrics Styling */
+    [data-testid="stMetric"] {{
+        background: {theme['card_bg']} !important;
+        border: 1px solid {theme['card_border']} !important;
+        border-radius: 12px !important;
+        padding: 10px 14px !important;
+        box-shadow: {theme['card_shadow']} !important;
+    }}
+    [data-testid="stMetricLabel"] p {{
+        color: {theme['text_sub']} !important;
+        font-weight: 700 !important;
+        font-size: 0.82rem !important;
+    }}
+    [data-testid="stMetricValue"] div {{
+        color: {theme['text_main']} !important;
+        font-family: 'JetBrains Mono', monospace !important;
+        font-weight: 800 !important;
+        font-size: 1.35rem !important;
+    }}
+
+    /* Buttons */
     .stButton > button {{
         background: {theme['btn_gradient']} !important;
         color: #ffffff !important;
@@ -388,6 +507,19 @@ st.markdown(f"""
         border-radius: 10px !important;
         font-weight: 700 !important;
         padding: 0.55rem 1.2rem !important;
+        box-shadow: 0 4px 12px {theme['hero_glow']} !important;
+        transition: transform 0.15s ease !important;
+    }}
+    .stButton > button:hover {{
+        transform: translateY(-2px) !important;
+    }}
+
+    /* Dataframes & Tables */
+    [data-testid="stDataFrame"], [data-testid="stTable"] {{
+        background: {theme['card_bg']} !important;
+        border: 1px solid {theme['card_border']} !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -399,7 +531,7 @@ st.markdown(f"""
 <div class="hero-container">
     <div class="live-indicator">
         <span class="live-dot"></span>
-        Disaster-Aware Machine Learning Engine
+        Disaster-Aware Machine Learning Engine Active
     </div>
     <h1 class="hero-title">Disaster-Aware Sales Forecasting & Impact Analysis System</h1>
     <p class="hero-subtitle">
@@ -487,21 +619,21 @@ with tab_dash:
         risk_badge = '<span class="badge-pill badge-crit">● CRITICAL RISK</span>'
         risk_glow = theme['negative']
 
-    # 5 KPI Metric Cards
+    # 5 KPI Metric Cards (Compact & Responsive)
     c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
         st.markdown(f"""
-        <div class="metric-card-lux">
+        <div class="metric-card-lux" title="Full Amount: ₹{total_sales:,.0f}">
             <div class="metric-title">Total Sales <span>💰</span></div>
-            <div class="metric-number" style="color:{theme['accent_primary']};">₹{total_sales:,.0f}</div>
+            <div class="metric-number" style="color:{theme['accent_primary']};">{format_inr(total_sales)}</div>
             <div class="metric-subtext">Cumulative Realized Volume</div>
         </div>
         """, unsafe_allow_html=True)
     with c2:
         st.markdown(f"""
-        <div class="metric-card-lux">
+        <div class="metric-card-lux" title="Full Amount: ₹{avg_sales:,.0f}">
             <div class="metric-title">Average Sales <span>📈</span></div>
-            <div class="metric-number" style="color:{theme['accent_secondary']};">₹{avg_sales:,.0f}</div>
+            <div class="metric-number" style="color:{theme['accent_secondary']};">{format_inr(avg_sales)}</div>
             <div class="metric-subtext">Mean Period Revenue</div>
         </div>
         """, unsafe_allow_html=True)
@@ -527,7 +659,7 @@ with tab_dash:
         st.markdown(f"""
         <div class="metric-card-lux">
             <div class="metric-title">Current Risk Level <span>🛡️</span></div>
-            <div class="metric-number" style="margin-top:0.5rem; font-size:1.05rem;">{risk_badge}</div>
+            <div class="metric-number" style="margin-top:0.35rem;">{risk_badge}</div>
             <div class="metric-subtext">Operational Posture</div>
         </div>
         """, unsafe_allow_html=True)
@@ -548,7 +680,7 @@ with tab_dash:
 
         # Annotate major disaster periods if available
         if disasters_df is not None and not disasters_df.empty and 'start_date' in disasters_df.columns:
-            for _, d_row in disasters_df.head(5).iterrows():
+            for _, d_row in disasters_df.head(6).iterrows():
                 try:
                     s_d = pd.to_datetime(d_row['start_date'])
                     e_d = pd.to_datetime(d_row['end_date'])
@@ -557,9 +689,9 @@ with tab_dash:
                         x0=s_d, x1=e_d,
                         fillcolor=theme['negative'], opacity=0.12,
                         layer="below", line_width=0,
-                        annotation_text=d_name[:18],
+                        annotation_text=d_name[:20],
                         annotation_position="top left",
-                        annotation_font=dict(size=9, color=theme['text_sub'])
+                        annotation_font=dict(size=10, color=theme['text_sub'])
                     )
                 except Exception:
                     pass
@@ -745,8 +877,8 @@ with tab_impact:
 
         sel_duration_days = st.slider("Disruption Duration (Days)", min_value=7, max_value=180, value=45, step=7)
         
-        sel_impact_region = st.selectbox("Impacted Market Region", ['All Regions'] + sorted(sales_df['region'].unique().tolist()) if 'region' in sales_df.columns else ['All Regions'], index=0)
-        sel_impact_category = st.selectbox("Target Product Category", sorted(sales_df['category'].unique().tolist()) if 'category' in sales_df.columns else ['General Retail & FMCG'], index=0)
+        sel_impact_region = st.selectbox("Impacted Market Region", ['All Regions'] + (sorted(sales_df['region'].unique().tolist()) if 'region' in sales_df.columns else []), index=0)
+        sel_impact_category = st.selectbox("Target Product Category", (sorted(sales_df['category'].unique().tolist()) if 'category' in sales_df.columns else ['General Retail & FMCG']), index=0)
 
     # Compute Composite Impact Score
     score, risk_level, score_breakdown = calculate_disaster_impact_score(
@@ -776,18 +908,18 @@ with tab_impact:
         
         im1, im2, im3 = st.columns(3)
         with im1:
-            st.metric("Pre-Disaster Baseline", f"₹{baseline_window_sales:,.0f}")
+            st.metric("Pre-Disaster Baseline", format_inr(baseline_window_sales))
         with im2:
-            st.metric("Sales During Shock", f"₹{during_sales:,.0f}", delta=f"{phase_impact_pct}%", delta_color="inverse")
+            st.metric("Sales During Shock", format_inr(during_sales), delta=f"{phase_impact_pct}%", delta_color="inverse")
         with im3:
-            st.metric("Post-Disaster Recovery", f"₹{after_sales:,.0f}", delta=f"{rec_weeks_est} Wks to 95%")
+            st.metric("Post-Disaster Recovery", format_inr(after_sales), delta=f"{rec_weeks_est} Wks to 95%")
 
         im4, im5 = st.columns(2)
         with im4:
             st.markdown(f"""
             <div class="metric-card-lux">
                 <div class="metric-title">Disaster Impact Score (0–100) <span>🧮</span></div>
-                <div class="metric-number" style="color:{theme['warning']};">{score} <span style="font-size:1rem; color:{theme['text_sub']};">/ 100</span></div>
+                <div class="metric-number" style="color:{theme['warning']};">{score} <span style="font-size:0.9rem; color:{theme['text_sub']}; font-weight:600;">/ 100</span></div>
                 <div class="metric-subtext">Composite Shock Severity Index</div>
             </div>
             """, unsafe_allow_html=True)
@@ -796,7 +928,7 @@ with tab_impact:
             st.markdown(f"""
             <div class="metric-card-lux">
                 <div class="metric-title">Assessed Vulnerability Posture <span>🛡️</span></div>
-                <div class="metric-number" style="margin-top:0.45rem; font-size:1.15rem;">{r_badge}</div>
+                <div class="metric-number" style="margin-top:0.35rem;">{r_badge}</div>
                 <div class="metric-subtext">Multi-Factor Risk Classification</div>
             </div>
             """, unsafe_allow_html=True)
@@ -887,9 +1019,9 @@ with tab_forecast:
         st.markdown("#### 🎯 Model Evaluation Metrics (Strict Out-of-Time Test Set)")
         m_col1, m_col2, m_col3, m_col4 = st.columns(4)
         with m_col1:
-            st.metric("MAE (Mean Absolute Error)", f"₹{model_perf.get('mae', 135725):,.2f}")
+            st.metric("MAE (Mean Absolute Error)", format_inr(model_perf.get('mae', 135725)))
         with m_col2:
-            st.metric("RMSE (Root Mean Squared Error)", f"₹{model_perf.get('rmse', 514948):,.2f}")
+            st.metric("RMSE (Root Mean Squared Error)", format_inr(model_perf.get('rmse', 514948)))
         with m_col3:
             st.metric("MAPE (Percentage Error)", f"{model_perf.get('mape_pct', 6.84):.2f}%")
         with m_col4:
@@ -965,8 +1097,8 @@ with tab_whatif:
         sim_consumer_shift = st.slider("Consumer-Behaviour Shift (%)", min_value=-100, max_value=100, value=-30, step=5,
                                        help="Negative = Offline drop / demand contraction; Positive = Online surge / pantry loading")
 
-        sim_category = st.selectbox("Product Sector for Simulation", sorted(sales_df['category'].unique().tolist()) if 'category' in sales_df.columns else ['General Retail & FMCG'], index=0)
-        sim_channel = st.selectbox("Sales Channel for Simulation", sorted(sales_df['channel'].unique().tolist()) if 'channel' in sales_df.columns else ['Offline Store / Mandi'], index=0)
+        sim_category = st.selectbox("Product Sector for Simulation", (sorted(sales_df['category'].unique().tolist()) if 'category' in sales_df.columns else ['General Retail & FMCG']), index=0)
+        sim_channel = st.selectbox("Sales Channel for Simulation", (sorted(sales_df['channel'].unique().tolist()) if 'channel' in sales_df.columns else ['Offline Store / Mandi']), index=0)
 
     # Base revenue for simulation
     sim_base_rev = f_df[f_df['category'] == sim_category]['revenue_inr'].mean() if len(f_df[f_df['category'] == sim_category]) > 0 else avg_sales
@@ -988,9 +1120,9 @@ with tab_whatif:
         
         sm1, sm2, sm3 = st.columns(3)
         with sm1:
-            st.metric("Normal Baseline Revenue", f"₹{sim_res['baseline_weekly_revenue']:,.0f}")
+            st.metric("Normal Baseline Revenue", format_inr(sim_res['baseline_weekly_revenue']))
         with sm2:
-            st.metric("Simulated Shock Revenue", f"₹{sim_res['disaster_scenario_revenue']:,.0f}",
+            st.metric("Simulated Shock Revenue", format_inr(sim_res['disaster_scenario_revenue']),
                       delta=f"{sim_res['expected_percentage_impact']}%", delta_color="inverse")
         with sm3:
             st.metric("Estimated Recovery Time", f"{sim_res['estimated_recovery_weeks']} Weeks")
@@ -999,7 +1131,7 @@ with tab_whatif:
         <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.05)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 14px; margin-top:10px; font-size:0.85rem; line-height:1.5;">
             <b>Disaster Impact Score:</b> {sim_res['disaster_impact_score']} / 100 &nbsp;|&nbsp; 
             <b>Risk Category:</b> <span style="font-weight:800; color:{theme['negative'] if sim_res['risk_level'] in ['High', 'Critical'] else theme['warning']};">{sim_res['risk_level'].upper()}</span><br>
-            <b>Expected Weekly Revenue Delta:</b> ₹{sim_res['revenue_change_inr']:,.0f}
+            <b>Expected Weekly Revenue Delta:</b> {format_inr(sim_res['revenue_change_inr'])}
         </div>
         """, unsafe_allow_html=True)
 
@@ -1040,7 +1172,7 @@ with tab_whatif:
 st.markdown("<hr style='opacity:0.18; margin:2.0rem 0 1.0rem 0;'>", unsafe_allow_html=True)
 st.markdown(f"""
 <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.80rem; color:{theme['text_sub']}; flex-wrap:wrap; gap:8px;">
-    <div>⚡ <b>Disaster-Aware Sales Forecasting OS</b> &bull; BE AI&DS Final Year Capstone Project</div>
-    <div>Strict Out-of-Time ML Validation &bull; Zero Data Leakage &bull; Ready for Streamlit Cloud</div>
+    <div>⚡ <b>Disaster-Aware Sales Forecasting OS</b> &bull; BE AI&DS Capstone Project</div>
+    <div>Strict Out-of-Time ML Validation &bull; Zero Data Leakage &bull; Production Optimized</div>
 </div>
 """, unsafe_allow_html=True)
