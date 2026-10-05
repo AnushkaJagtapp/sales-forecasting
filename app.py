@@ -42,80 +42,146 @@ st.set_page_config(
 )
 
 # -----------------------------------------------------------------------------
-# Curated Multi-Theme Design Palettes
+# Curated Fresh & Vibrant Multi-Theme Design Palettes
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Curated Fresh & Vibrant Multi-Theme Design Palettes
 # -----------------------------------------------------------------------------
 THEMES = {
-    "⚡ Titanium Minimalist & Royal Azure (Default)": {
-        "bg_main": "#090e17",
-        "sidebar_bg": "#0c1322",
-        "card_bg": "rgba(15, 23, 42, 0.78)",
-        "card_border": "rgba(56, 189, 248, 0.22)",
-        "accent_primary": "#2563eb",
-        "accent_secondary": "#38bdf8",
-        "accent_tertiary": "#60a5fa",
-        "positive": "#22c55e",
-        "warning": "#f59e0b",
-        "negative": "#f43f5e",
-        "text_main": "#f8fafc",
-        "text_sub": "#94a3b8",
-        "gradient_hero": "linear-gradient(135deg, #2563eb 0%, #38bdf8 50%, #60a5fa 100%)",
-        "hero_glow": "rgba(37, 99, 235, 0.2)",
-        "plotly_line": "#38bdf8",
-        "chart_colors": ["#38bdf8", "#2563eb", "#60a5fa", "#22c55e", "#f59e0b", "#f43f5e"]
-    },
-    "🌲 Emerald FinTech & Clean Slate": {
-        "bg_main": "#06120e",
-        "sidebar_bg": "#0a1b15",
-        "card_bg": "rgba(12, 33, 26, 0.78)",
-        "card_border": "rgba(16, 185, 129, 0.25)",
+    "🌿 Fresh Nordic Mint & Aqua (Luminous Emerald & Cyan)": {
+        "is_dark": False,
+        "bg_main": "#f3faf6",
+        "sidebar_bg": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "rgba(16, 185, 129, 0.22)",
+        "card_shadow": "0 10px 25px -4px rgba(16, 185, 129, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
+        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(236, 253, 245, 0.95) 100%)",
         "accent_primary": "#059669",
-        "accent_secondary": "#10b981",
-        "accent_tertiary": "#34d399",
-        "positive": "#34d399",
-        "warning": "#eab308",
-        "negative": "#f87171",
-        "text_main": "#f0fdf4",
-        "text_sub": "#86efac",
-        "gradient_hero": "linear-gradient(135deg, #059669 0%, #10b981 50%, #eab308 100%)",
-        "hero_glow": "rgba(16, 185, 129, 0.25)",
-        "plotly_line": "#10b981",
-        "chart_colors": ["#10b981", "#059669", "#34d399", "#eab308", "#6ee7b7", "#f87171"]
-    },
-    "🔥 Solar Obsidian & Molten Gold": {
-        "bg_main": "#0c0a08",
-        "sidebar_bg": "#14100c",
-        "card_bg": "rgba(28, 22, 18, 0.8)",
-        "card_border": "rgba(245, 158, 11, 0.28)",
-        "accent_primary": "#f59e0b",
-        "accent_secondary": "#fbbf24",
-        "accent_tertiary": "#f97316",
-        "positive": "#10b981",
-        "warning": "#f59e0b",
-        "negative": "#ef4444",
-        "text_main": "#fffbeb",
-        "text_sub": "#fde68a",
-        "gradient_hero": "linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ef4444 100%)",
-        "hero_glow": "rgba(245, 158, 11, 0.25)",
-        "plotly_line": "#fbbf24",
-        "chart_colors": ["#f59e0b", "#f97316", "#ef4444", "#fbbf24", "#10b981", "#ec4899"]
-    },
-    "🌌 Cyber Neon & Deep Violet": {
-        "bg_main": "#090916",
-        "sidebar_bg": "#0f0f24",
-        "card_bg": "rgba(22, 20, 48, 0.78)",
-        "card_border": "rgba(139, 92, 246, 0.28)",
-        "accent_primary": "#8b5cf6",
-        "accent_secondary": "#a78bfa",
-        "accent_tertiary": "#ec4899",
+        "accent_secondary": "#06b6d4",
+        "accent_tertiary": "#6366f1",
         "positive": "#10b981",
         "warning": "#f59e0b",
         "negative": "#f43f5e",
-        "text_main": "#faf5ff",
-        "text_sub": "#d8b4fe",
-        "gradient_hero": "linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #06b6d4 100%)",
-        "hero_glow": "rgba(139, 92, 246, 0.25)",
-        "plotly_line": "#a78bfa",
-        "chart_colors": ["#8b5cf6", "#ec4899", "#06b6d4", "#10b981", "#f59e0b", "#f43f5e"]
+        "text_main": "#0f172a",
+        "text_sub": "#475569",
+        "gradient_hero": "linear-gradient(135deg, #059669 0%, #06b6d4 50%, #6366f1 100%)",
+        "hero_glow": "rgba(16, 185, 129, 0.15)",
+        "kpi_top_border": "linear-gradient(90deg, #059669, #06b6d4)",
+        "btn_gradient": "linear-gradient(135deg, #059669 0%, #06b6d4 100%)",
+        "plotly_line": "#059669",
+        "plotly_template": "plotly_white",
+        "plotly_paper": "#ffffff",
+        "plotly_plot": "#f8fafc",
+        "plotly_grid": "rgba(0,0,0,0.06)",
+        "chart_colors": ["#059669", "#06b6d4", "#6366f1", "#10b981", "#f59e0b", "#f43f5e"]
+    },
+    "💎 Arctic Ice & Electric Cobalt (Fresh Clean SaaS)": {
+        "is_dark": False,
+        "bg_main": "#f0f6fc",
+        "sidebar_bg": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "rgba(37, 99, 235, 0.22)",
+        "card_shadow": "0 10px 25px -4px rgba(37, 99, 235, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
+        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(239, 246, 255, 0.95) 100%)",
+        "accent_primary": "#2563eb",
+        "accent_secondary": "#0ea5e9",
+        "accent_tertiary": "#8b5cf6",
+        "positive": "#10b981",
+        "warning": "#f59e0b",
+        "negative": "#f43f5e",
+        "text_main": "#0f172a",
+        "text_sub": "#475569",
+        "gradient_hero": "linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #8b5cf6 100%)",
+        "hero_glow": "rgba(37, 99, 235, 0.15)",
+        "kpi_top_border": "linear-gradient(90deg, #2563eb, #0ea5e9)",
+        "btn_gradient": "linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%)",
+        "plotly_line": "#2563eb",
+        "plotly_template": "plotly_white",
+        "plotly_paper": "#ffffff",
+        "plotly_plot": "#f8fafc",
+        "plotly_grid": "rgba(0,0,0,0.06)",
+        "chart_colors": ["#2563eb", "#0ea5e9", "#8b5cf6", "#10b981", "#f59e0b", "#f43f5e"]
+    },
+    "🌸 Fresh Orchid & Coral Sunset (Warm Vibrant Bloom)": {
+        "is_dark": False,
+        "bg_main": "#fdf4f8",
+        "sidebar_bg": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "rgba(217, 70, 239, 0.22)",
+        "card_shadow": "0 10px 25px -4px rgba(217, 70, 239, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
+        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(253, 242, 248, 0.95) 100%)",
+        "accent_primary": "#d946ef",
+        "accent_secondary": "#f43f5e",
+        "accent_tertiary": "#0d9488",
+        "positive": "#10b981",
+        "warning": "#f59e0b",
+        "negative": "#f43f5e",
+        "text_main": "#1e1b4b",
+        "text_sub": "#64748b",
+        "gradient_hero": "linear-gradient(135deg, #d946ef 0%, #f43f5e 50%, #0d9488 100%)",
+        "hero_glow": "rgba(217, 70, 239, 0.15)",
+        "kpi_top_border": "linear-gradient(90deg, #d946ef, #f43f5e)",
+        "btn_gradient": "linear-gradient(135deg, #d946ef 0%, #f43f5e 100%)",
+        "plotly_line": "#d946ef",
+        "plotly_template": "plotly_white",
+        "plotly_paper": "#ffffff",
+        "plotly_plot": "#fdf4f8",
+        "plotly_grid": "rgba(0,0,0,0.05)",
+        "chart_colors": ["#d946ef", "#f43f5e", "#0d9488", "#10b981", "#f59e0b", "#6366f1"]
+    },
+    "🍋 Fresh Citrus Mojito (Sunlit Lime & Teal)": {
+        "is_dark": False,
+        "bg_main": "#f6fbf4",
+        "sidebar_bg": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "rgba(101, 163, 13, 0.25)",
+        "card_shadow": "0 10px 25px -4px rgba(101, 163, 13, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.03)",
+        "hero_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 254, 231, 0.95) 100%)",
+        "accent_primary": "#65a30d",
+        "accent_secondary": "#0d9488",
+        "accent_tertiary": "#eab308",
+        "positive": "#16a34a",
+        "warning": "#eab308",
+        "negative": "#f43f5e",
+        "text_main": "#142510",
+        "text_sub": "#4b5e43",
+        "gradient_hero": "linear-gradient(135deg, #65a30d 0%, #0d9488 50%, #eab308 100%)",
+        "hero_glow": "rgba(101, 163, 13, 0.15)",
+        "kpi_top_border": "linear-gradient(90deg, #65a30d, #0d9488)",
+        "btn_gradient": "linear-gradient(135deg, #65a30d 0%, #0d9488 100%)",
+        "plotly_line": "#65a30d",
+        "plotly_template": "plotly_white",
+        "plotly_paper": "#ffffff",
+        "plotly_plot": "#f7faf5",
+        "plotly_grid": "rgba(0,0,0,0.06)",
+        "chart_colors": ["#65a30d", "#0d9488", "#eab308", "#16a34a", "#f97316", "#ef4444"]
+    },
+    "🌙 Midnight Aurora Neon (Fresh Cyber Dark)": {
+        "is_dark": True,
+        "bg_main": "#0b0f19",
+        "sidebar_bg": "#080c14",
+        "card_bg": "rgba(18, 25, 44, 0.88)",
+        "card_border": "rgba(0, 245, 155, 0.28)",
+        "card_shadow": "0 10px 30px -5px rgba(0, 0, 0, 0.6)",
+        "hero_bg": "linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%)",
+        "accent_primary": "#00f59b",
+        "accent_secondary": "#00d2ff",
+        "accent_tertiary": "#ffbe0b",
+        "positive": "#00f59b",
+        "warning": "#ffbe0b",
+        "negative": "#ff3366",
+        "text_main": "#ffffff",
+        "text_sub": "#94a3b8",
+        "gradient_hero": "linear-gradient(135deg, #00f59b 0%, #00d2ff 50%, #ffbe0b 100%)",
+        "hero_glow": "rgba(0, 245, 155, 0.25)",
+        "kpi_top_border": "linear-gradient(90deg, #00f59b, #00d2ff)",
+        "btn_gradient": "linear-gradient(135deg, #00f59b 0%, #00d2ff 100%)",
+        "plotly_line": "#00d2ff",
+        "plotly_template": "plotly_dark",
+        "plotly_paper": "rgba(0,0,0,0)",
+        "plotly_plot": "rgba(18, 25, 44, 0.88)",
+        "plotly_grid": "rgba(255,255,255,0.08)",
+        "chart_colors": ["#00f59b", "#00d2ff", "#ffbe0b", "#ff3366", "#a78bfa", "#38bdf8"]
     }
 }
 
@@ -146,16 +212,16 @@ except Exception as e:
 # -----------------------------------------------------------------------------
 with st.sidebar:
     st.markdown("""
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px;">
-        <div style="background:linear-gradient(135deg, #2563eb, #38bdf8); width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; box-shadow:0 0 15px rgba(56, 189, 248, 0.5);">⚡</div>
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px; padding:6px 0;">
+        <div style="background:linear-gradient(135deg, #059669, #06b6d4); width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 6px 18px rgba(5, 150, 105, 0.35);">⚡</div>
         <div>
-            <div style="font-family:'Space Grotesk'; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.1;">DISASTER AI</div>
-            <div style="font-size:0.75rem; color:#94a3b8; letter-spacing:0.04em;">DEMAND INTELLIGENCE</div>
+            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.25rem; font-weight:800; color:inherit; line-height:1.1; letter-spacing:-0.01em;">DISASTER AI</div>
+            <div style="font-size:0.75rem; opacity:0.8; letter-spacing:0.06em; font-weight:700;">FRESH DEMAND OS</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<p style='font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:#94a3b8; font-weight:700; margin-bottom:6px;'>🎨 Visual Theme Palette</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>🎨 Visual Color Palette</p>", unsafe_allow_html=True)
     selected_theme_name = st.selectbox(
         "Color Theme",
         list(THEMES.keys()),
@@ -164,20 +230,20 @@ with st.sidebar:
     )
     theme = THEMES[selected_theme_name]
     
-    st.markdown("<hr style='border-color:rgba(255,255,255,0.06); margin:1rem 0;'>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:#94a3b8; font-weight:700; margin-bottom:6px;'>Scope & Segment Controls</p>", unsafe_allow_html=True)
+    st.markdown("<hr style='opacity:0.15; margin:1.1rem 0;'>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>📍 Geographic & Category Filters</p>", unsafe_allow_html=True)
     
     all_regions = ['All Regions'] + sorted(sales_df['region'].unique().tolist())
-    selected_region = st.selectbox("📍 Target Geography", all_regions, index=0)
+    selected_region = st.selectbox("Geographic Market", all_regions, index=0)
     
     all_categories = ['All Categories'] + sorted(sales_df['category'].unique().tolist())
-    selected_category = st.selectbox("📦 Industry / Category", all_categories, index=0)
+    selected_category = st.selectbox("Industry / Sector", all_categories, index=0)
     
     all_channels = ['All Channels'] + sorted(sales_df['channel'].unique().tolist())
-    selected_channel = st.selectbox("🛒 Fulfillment Channel", all_channels, index=0)
+    selected_channel = st.selectbox("Fulfillment Channel", all_channels, index=0)
     
-    st.markdown("<hr style='border-color:rgba(255,255,255,0.06); margin:1rem 0;'>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:#94a3b8; font-weight:700; margin-bottom:6px;'>Forecasting Engine</p>", unsafe_allow_html=True)
+    st.markdown("<hr style='opacity:0.15; margin:1.1rem 0;'>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85; font-weight:800; margin-bottom:6px;'>🤖 Active Forecasting Model</p>", unsafe_allow_html=True)
     
     selected_model_name = st.selectbox(
         "Active Model Architecture",
@@ -186,8 +252,10 @@ with st.sidebar:
     )
     
     st.markdown(f"""
-    <div style="background:rgba(255, 255, 255, 0.04); border:1px solid {theme['card_border']}; border-radius:10px; padding:10px; margin-top:10px; font-size:0.78rem; color:#cbd5e1;">
-        <b>Validation Standard:</b> Strict Out-of-Time split (2019-2022 Train, 2023 Test). <b>0% Lookahead Leakage.</b>
+    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(255,255,255,0.05)'}; border:1px solid {theme['card_border']}; border-radius:12px; padding:12px 14px; margin-top:14px; font-size:0.80rem; color:{theme['text_sub']}; line-height:1.5;">
+        <span style="font-weight:700; color:{theme['accent_primary']};">Strict Validation Protocol:</span><br>
+        2019–2022 Train, 2023 Out-of-Time Test.<br>
+        <b>0% Future Data Leakage.</b>
     </div>
     """, unsafe_allow_html=True)
 
@@ -196,7 +264,7 @@ with st.sidebar:
 # -----------------------------------------------------------------------------
 st.markdown(f"""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
     html, body, [class*="css"] {{
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -204,42 +272,42 @@ st.markdown(f"""
     }}
     
     .stApp {{
-        background: radial-gradient(circle at 15% 15%, {theme['hero_glow']} 0%, transparent 40%),
-                    radial-gradient(circle at 85% 75%, {theme['hero_glow']} 0%, transparent 45%),
+        background: radial-gradient(circle at 10% 8%, {theme['hero_glow']} 0%, transparent 45%),
+                    radial-gradient(circle at 90% 85%, {theme['hero_glow']} 0%, transparent 50%),
                     {theme['bg_main']} !important;
     }}
 
     [data-testid="stSidebar"] {{
         background-color: {theme['sidebar_bg']} !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.07);
+        border-right: 1px solid {theme['card_border']};
     }}
 
     /* Top Hero Header */
     .hero-container {{
         position: relative;
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+        background: {theme['hero_bg']};
         border: 1px solid {theme['card_border']};
         border-radius: 20px;
-        padding: 1.8rem 2.2rem;
+        padding: 2.0rem 2.4rem;
         margin-bottom: 1.8rem;
         backdrop-filter: blur(16px);
-        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: {theme['card_shadow']};
         overflow: hidden;
     }}
 
     .hero-container::before {{
         content: '';
         position: absolute;
-        top: 0; left: 0; right: 0; height: 3px;
+        top: 0; left: 0; right: 0; height: 4px;
         background: {theme['gradient_hero']};
     }}
 
     .hero-title {{
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 2.3rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        background: linear-gradient(135deg, #ffffff 30%, {theme['text_sub']} 100%);
+        font-size: 2.35rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        background: {theme['gradient_hero']};
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0;
@@ -249,69 +317,82 @@ st.markdown(f"""
     .hero-subtitle {{
         color: {theme['text_sub']};
         font-size: 1.05rem;
-        font-weight: 400;
-        margin-top: 0.5rem;
-        max-width: 900px;
-        line-height: 1.5;
+        font-weight: 500;
+        margin-top: 0.6rem;
+        max-width: 920px;
+        line-height: 1.55;
     }}
 
     .live-indicator {{
         display: inline-flex;
         align-items: center;
-        gap: 6px;
-        background: rgba(34, 197, 94, 0.12);
-        border: 1px solid rgba(34, 197, 94, 0.3);
-        color: #4ade80;
-        padding: 4px 12px;
+        gap: 8px;
+        background: {'rgba(5, 150, 105, 0.12)' if not theme['is_dark'] else 'rgba(0, 245, 155, 0.15)'};
+        border: 1px solid {theme['card_border']};
+        color: {theme['accent_primary']};
+        padding: 5px 14px;
         border-radius: 9999px;
         font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
+        font-weight: 800;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.9rem;
     }}
 
     .live-dot {{
-        width: 8px;
-        height: 8px;
-        background-color: #22c55e;
+        width: 9px;
+        height: 9px;
+        background-color: {theme['positive']};
         border-radius: 50%;
-        box-shadow: 0 0 10px #22c55e;
+        box-shadow: 0 0 12px {theme['positive']};
         animation: pulse 1.8s infinite;
     }}
 
-    /* Enterprise Glass Cards */
+    @keyframes pulse {{
+        0%, 100% {{ opacity: 1; transform: scale(1); }}
+        50% {{ opacity: 0.4; transform: scale(0.85); }}
+    }}
+
+    /* Enterprise Glass & Solid Cards */
     .metric-card-lux {{
         background: {theme['card_bg']};
         border: 1px solid {theme['card_border']};
         border-radius: 16px;
-        padding: 1.3rem;
+        padding: 1.35rem 1.25rem;
         position: relative;
         backdrop-filter: blur(12px);
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: {theme['card_shadow']};
+        overflow: hidden;
+    }}
+
+    .metric-card-lux::before {{
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 3px;
+        background: {theme['kpi_top_border']};
     }}
 
     .metric-card-lux:hover {{
         transform: translateY(-4px);
-        border-color: {theme['accent_secondary']};
-        box-shadow: 0 15px 35px -5px {theme['hero_glow']};
+        border-color: {theme['accent_primary']};
+        box-shadow: 0 16px 32px -4px {theme['hero_glow']};
     }}
 
     .metric-card-lux .card-glow {{
         position: absolute;
-        top: 0; right: 0; width: 60px; height: 60px;
+        top: 0; right: 0; width: 70px; height: 70px;
         border-radius: 50%;
-        filter: blur(30px);
-        opacity: 0.3;
+        filter: blur(35px);
+        opacity: 0.18;
     }}
 
     .metric-title {{
-        font-size: 0.82rem;
+        font-size: 0.80rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: {theme['text_sub']};
-        font-weight: 600;
+        font-weight: 800;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -320,36 +401,37 @@ st.markdown(f"""
     .metric-number {{
         font-family: 'JetBrains Mono', monospace;
         font-size: 1.85rem;
-        font-weight: 700;
-        margin-top: 0.4rem;
-        margin-bottom: 0.2rem;
+        font-weight: 800;
+        margin-top: 0.45rem;
+        margin-bottom: 0.25rem;
         letter-spacing: -0.02em;
     }}
 
     .metric-subtext {{
         font-size: 0.78rem;
-        color: #94a3b8;
+        color: {theme['text_sub']};
         display: flex;
         align-items: center;
         gap: 4px;
+        font-weight: 600;
     }}
 
-    /* Badge Pills */
+    /* Fresh Badge Pills */
     .badge-pill {{
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        border-radius: 20px;
+        gap: 6px;
+        padding: 5px 14px;
+        border-radius: 9999px;
         font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
+        font-weight: 800;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
     }}
-    .badge-low {{ background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }}
-    .badge-mod {{ background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }}
-    .badge-high {{ background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }}
-    .badge-crit {{ background: rgba(244, 63, 94, 0.2); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.4); }}
+    .badge-low {{ background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); }}
+    .badge-mod {{ background: rgba(245, 158, 11, 0.15); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.35); }}
+    .badge-high {{ background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.35); }}
+    .badge-crit {{ background: rgba(244, 63, 94, 0.2); color: #e11d48; border: 1px solid rgba(244, 63, 94, 0.4); }}
 
     /* Custom Glass Panel */
     .glass-panel {{
@@ -359,31 +441,48 @@ st.markdown(f"""
         padding: 1.4rem;
         backdrop-filter: blur(12px);
         margin-bottom: 1.2rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        box-shadow: {theme['card_shadow']};
     }}
 
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {{
-        gap: 6px;
-        background: rgba(15, 23, 42, 0.6);
+        gap: 8px;
+        background: {'rgba(255, 255, 255, 0.85)' if not theme['is_dark'] else 'rgba(15, 23, 42, 0.7)'};
         padding: 6px;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        border: 1px solid {theme['card_border']};
+        box-shadow: {theme['card_shadow']};
     }}
     .stTabs [data-baseweb="tab"] {{
         padding: 10px 18px;
-        border-radius: 10px;
+        border-radius: 11px;
         color: {theme['text_sub']};
-        font-size: 0.9rem;
-        font-weight: 600;
-        transition: all 0.2s ease;
+        font-size: 0.90rem;
+        font-weight: 700;
+        transition: all 0.22s ease;
         border: none !important;
         background: transparent !important;
     }}
     .stTabs [aria-selected="true"] {{
         background: {theme['gradient_hero']} !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 14px {theme['hero_glow']};
+        box-shadow: 0 4px 16px {theme['hero_glow']};
+    }}
+
+    /* Fresh Button Styling */
+    .stButton > button {{
+        background: {theme['btn_gradient']} !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        padding: 0.6rem 1.4rem !important;
+        box-shadow: 0 4px 14px {theme['hero_glow']} !important;
+        transition: all 0.2s ease-in-out !important;
+    }}
+    .stButton > button:hover {{
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 20px {theme['hero_glow']} !important;
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -395,12 +494,12 @@ st.markdown(f"""
 <div class="hero-container">
     <div class="live-indicator">
         <span class="live-dot"></span>
-        Exogenous Disruption Intelligence Engine Active
+        Disruption-Aware Intelligence Engine Active
     </div>
     <h1 class="hero-title">Disaster-Aware Sales Forecasting & Impact Analysis System</h1>
     <p class="hero-subtitle">
-        Bridging the critical gap in demand intelligence: quantifying shock severity, channel reallocation dynamics, 
-        and recovery timelines across Pandemics, Climate Agri-Shocks, and AI Job Recessions.
+        Bridging the critical gap in demand forecasting: quantifying shock severity, dynamic channel shifts, 
+        and 95% baseline recovery crossing across Pandemics, Climate Agri-Shocks, and Modern AI Job Recessions.
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -420,13 +519,13 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
 
 # Shared Plotly layout config dynamic with active theme
 PLOTLY_THEME = dict(
-    template='plotly_dark',
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor=theme['card_bg'],
+    template=theme['plotly_template'],
+    paper_bgcolor=theme['plotly_paper'],
+    plot_bgcolor=theme['plotly_plot'],
     font=dict(family='Plus Jakarta Sans', color=theme['text_sub']),
     margin=dict(l=15, r=15, t=38, b=15),
-    xaxis=dict(gridcolor='rgba(255,255,255,0.06)', zerolinecolor='rgba(255,255,255,0.1)'),
-    yaxis=dict(gridcolor='rgba(255,255,255,0.06)', zerolinecolor='rgba(255,255,255,0.1)')
+    xaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid']),
+    yaxis=dict(gridcolor=theme['plotly_grid'], zerolinecolor=theme['plotly_grid'])
 )
 
 # Filtered Data slice
@@ -471,15 +570,15 @@ with tab1:
     with k1:
         st.markdown(f"""
         <div class="metric-card-lux">
-            <div class="card-glow" style="background:#38bdf8;"></div>
+            <div class="card-glow" style="background:{theme['accent_secondary']};"></div>
             <div class="metric-title">Normal Baseline Demand <span>📊</span></div>
-            <div class="metric-number" style="color: #38bdf8;">₹{recent_baseline_rev:,.0f}</div>
+            <div class="metric-number" style="color: {theme['accent_secondary']};">₹{recent_baseline_rev:,.0f}</div>
             <div class="metric-subtext">Avg Weekly Pre-Disruption</div>
         </div>
         """, unsafe_allow_html=True)
 
     with k2:
-        rev_color = '#f87171' if disaster_period_rev < recent_baseline_rev else '#34d399'
+        rev_color = theme['negative'] if disaster_period_rev < recent_baseline_rev else theme['positive']
         st.markdown(f"""
         <div class="metric-card-lux">
             <div class="card-glow" style="background:{rev_color};"></div>
@@ -490,7 +589,7 @@ with tab1:
         """, unsafe_allow_html=True)
 
     with k3:
-        impact_color = '#f87171' if overall_impact_pct < 0 else '#34d399'
+        impact_color = theme['negative'] if overall_impact_pct < 0 else theme['positive']
         st.markdown(f"""
         <div class="metric-card-lux">
             <div class="card-glow" style="background:{impact_color};"></div>
@@ -503,9 +602,9 @@ with tab1:
     with k4:
         st.markdown(f"""
         <div class="metric-card-lux">
-            <div class="card-glow" style="background:#fbbf24;"></div>
+            <div class="card-glow" style="background:{theme['warning']};"></div>
             <div class="metric-title">Disaster Impact Score <span>🧮</span></div>
-            <div class="metric-number" style="color: #fbbf24;">{avg_impact_score}<span style="font-size:1rem; color:#64748b;"> / 100</span></div>
+            <div class="metric-number" style="color: {theme['warning']};">{avg_impact_score}<span style="font-size:1rem; color:{theme['text_sub']};"> / 100</span></div>
             <div class="metric-subtext">Composite Disruption Index</div>
         </div>
         """, unsafe_allow_html=True)
@@ -537,7 +636,7 @@ with tab1:
             y='Category',
             orientation='h',
             color='Impact_Pct',
-            color_continuous_scale=['#f43f5e', '#fbbf24', '#10b981'],
+            color_continuous_scale=[theme['negative'], theme['warning'], theme['positive']],
             labels={'Impact_Pct': 'Sales Deviation (%)', 'Category': ''},
             title="Sector Sales Impact (%) During Active Disruptions"
         )
@@ -581,9 +680,9 @@ with tab2:
         y=ts_total['revenue_inr'],
         mode='lines',
         name='Weekly Sales (INR)',
-        line=dict(color='#38bdf8', width=2.5),
+        line=dict(color=theme['plotly_line'], width=2.5),
         fill='tozeroy',
-        fillcolor='rgba(56, 189, 248, 0.06)'
+        fillcolor='rgba(16, 185, 129, 0.08)' if not theme['is_dark'] else 'rgba(0, 245, 155, 0.08)'
     ))
     
     # Disaster Window Shading
@@ -604,7 +703,7 @@ with tab2:
             annotation_text=dis['disaster_name'],
             annotation_position="top left",
             annotation_font_size=9,
-            annotation_font_color="#94a3b8"
+            annotation_font_color=theme['text_sub']
         )
 
     fig_ts.update_layout(
@@ -625,7 +724,7 @@ with tab2:
         
         st.markdown(f"""
         <div class="glass-panel" style="font-size:0.85rem;">
-            <div style="font-weight:700; color:#fff; margin-bottom:8px;">{target_event['disaster_name']}</div>
+            <div style="font-weight:700; color:{theme['text_main']}; margin-bottom:8px;">{target_event['disaster_name']}</div>
             • <b>Type:</b> {target_event['disaster_type']}<br>
             • <b>Dates:</b> {target_event['start_date']} ➔ {target_event['end_date']}<br>
             • <b>Duration:</b> {target_event['duration_days']} days<br>
@@ -651,7 +750,7 @@ with tab2:
             st.markdown(f"""
             <div class="metric-card-lux">
                 <div class="metric-title">Phase 1: Baseline</div>
-                <div class="metric-number" style="color:#38bdf8;">₹{phase_analysis['baseline_weekly_revenue']:,.0f}</div>
+                <div class="metric-number" style="color:{theme['accent_secondary']};">₹{phase_analysis['baseline_weekly_revenue']:,.0f}</div>
                 <div class="metric-subtext">Pre-Event Stable Level</div>
             </div>
             """, unsafe_allow_html=True)
@@ -659,7 +758,7 @@ with tab2:
             st.markdown(f"""
             <div class="metric-card-lux">
                 <div class="metric-title">Phase 2: During Shock</div>
-                <div class="metric-number" style="color:{'#f87171' if phase_analysis['impact_percentage']<0 else '#34d399'};">₹{phase_analysis['during_weekly_revenue']:,.0f}</div>
+                <div class="metric-number" style="color:{theme['negative'] if phase_analysis['impact_percentage']<0 else theme['positive']};">₹{phase_analysis['during_weekly_revenue']:,.0f}</div>
                 <div class="metric-subtext">Net Impact: {phase_analysis['impact_percentage']}%</div>
             </div>
             """, unsafe_allow_html=True)
@@ -667,7 +766,7 @@ with tab2:
             st.markdown(f"""
             <div class="metric-card-lux">
                 <div class="metric-title">Phase 3: Recovery Horizon</div>
-                <div class="metric-number" style="color:#a78bfa; font-size:1.35rem;">{phase_analysis['recovery_status']}</div>
+                <div class="metric-number" style="color:{theme['accent_tertiary']}; font-size:1.35rem;">{phase_analysis['recovery_status']}</div>
                 <div class="metric-subtext">95% Baseline Rebound</div>
             </div>
             """, unsafe_allow_html=True)
@@ -691,19 +790,19 @@ with tab3:
     metrics_df = metrics_df.sort_values(by='R² Score', ascending=False).reset_index(drop=True)
 
     st.markdown(f"""
-    <div style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(6,182,212,0.1)); border:1px solid rgba(99,102,241,0.3); border-radius:14px; padding:14px 20px; margin-bottom:1.2rem; display:flex; justify-content:space-between; align-items:center;">
+    <div style="background:{'rgba(5, 150, 105, 0.08)' if not theme['is_dark'] else 'rgba(0, 245, 155, 0.08)'}; border:1px solid {theme['card_border']}; border-radius:16px; padding:16px 22px; margin-bottom:1.4rem; display:flex; justify-content:space-between; align-items:center; box-shadow:{theme['card_shadow']};">
         <div>
-            <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:#a5b4fc; font-weight:700;">Top-Performing Architecture</div>
-            <div style="font-family:'Space Grotesk'; font-size:1.4rem; font-weight:700; color:#fff;">🏆 {eval_metrics['best_model']}</div>
+            <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:{theme['accent_primary']}; font-weight:800;">Top-Performing Architecture</div>
+            <div style="font-family:'Space Grotesk', sans-serif; font-size:1.45rem; font-weight:800; color:{theme['text_main']};">🏆 {eval_metrics['best_model']}</div>
         </div>
-        <div style="display:flex; gap:25px; text-align:right;">
+        <div style="display:flex; gap:30px; text-align:right;">
             <div>
-                <div style="font-size:0.75rem; color:#94a3b8;">Out-of-Time R² Score</div>
-                <div style="font-family:'JetBrains Mono'; font-size:1.3rem; font-weight:700; color:#34d399;">0.9430</div>
+                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:600;">Out-of-Time R² Score</div>
+                <div style="font-family:'JetBrains Mono', monospace; font-size:1.35rem; font-weight:800; color:{theme['positive']};">0.9430</div>
             </div>
             <div>
-                <div style="font-size:0.75rem; color:#94a3b8;">Mean Error (MAPE)</div>
-                <div style="font-family:'JetBrains Mono'; font-size:1.3rem; font-weight:700; color:#38bdf8;">6.64%</div>
+                <div style="font-size:0.75rem; color:{theme['text_sub']}; font-weight:600;">Mean Error (MAPE)</div>
+                <div style="font-family:'JetBrains Mono', monospace; font-size:1.35rem; font-weight:800; color:{theme['accent_secondary']};">6.64%</div>
             </div>
         </div>
     </div>
@@ -723,7 +822,7 @@ with tab3:
             x='Model Name',
             y='R² Score',
             color='R² Score',
-            color_continuous_scale='Viridis',
+            color_continuous_scale=[theme['accent_secondary'], theme['accent_primary']],
             title="Out-of-Time R² Fit Across Models (Higher is Better)"
         )
         fig_r2_bar.update_layout(**PLOTLY_THEME, height=300, coloraxis_showscale=False)
@@ -735,7 +834,7 @@ with tab3:
             x='Model Name',
             y='MAPE (%)',
             color='MAPE (%)',
-            color_continuous_scale='Reds_r',
+            color_continuous_scale=[theme['positive'], theme['warning'], theme['negative']],
             title="Mean Absolute Percentage Error (MAPE % - Lower is Better)"
         )
         fig_mape_bar.update_layout(**PLOTLY_THEME, height=300, coloraxis_showscale=False)
@@ -750,12 +849,12 @@ with tab3:
         x='actual_revenue',
         y='pred_XGBoost',
         color='disaster_impact_score',
-        color_continuous_scale='Turbo',
+        color_continuous_scale='Viridis',
         labels={'actual_revenue': 'Actual Revenue (INR)', 'pred_XGBoost': 'XGBoost Predicted Revenue (INR)', 'disaster_impact_score': 'Impact Score'},
         title="Actual vs Predicted Sales Alignment with Disruption Severity Spectrum"
     )
     max_val = max(sample_preds['actual_revenue'].max(), sample_preds['pred_XGBoost'].max())
-    fig_scatter.add_shape(type='line', x0=0, y0=0, x1=max_val, y1=max_val, line=dict(color='white', dash='dash', width=1.5))
+    fig_scatter.add_shape(type='line', x0=0, y0=0, x1=max_val, y1=max_val, line=dict(color=theme['accent_primary'], dash='dash', width=1.5))
     fig_scatter.update_layout(**PLOTLY_THEME, height=380)
     st.plotly_chart(fig_scatter, use_container_width=True)
 
@@ -864,9 +963,9 @@ with tab5:
     narrative = exp_data['narrative']
 
     st.markdown(f"""
-    <div class="glass-panel" style="border-left:4px solid #6366f1;">
-        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:#a5b4fc; font-weight:700;">Executive Diagnostic Summary</div>
-        <div style="font-size:1.15rem; font-weight:700; color:#fff; margin:6px 0;">{narrative['headline']}</div>
+    <div class="glass-panel" style="border-left:4px solid {theme['accent_primary']};">
+        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:{theme['accent_primary']}; font-weight:800;">Executive Diagnostic Summary</div>
+        <div style="font-size:1.15rem; font-weight:700; color:{theme['text_main']}; margin:6px 0;">{narrative['headline']}</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -878,7 +977,7 @@ with tab5:
     
     # SHAP Waterfall / Feature Contribution Chart
     top_contribs = exp_data['contributions'].head(12).copy()
-    top_contribs['color'] = top_contribs['shap_contribution'].apply(lambda x: '#10b981' if x >= 0 else '#f43f5e')
+    top_contribs['color'] = top_contribs['shap_contribution'].apply(lambda x: theme['positive'] if x >= 0 else theme['negative'])
     top_contribs['feature_clean'] = top_contribs['feature'].str.replace('_', ' ').str.title()
 
     fig_shap = px.bar(
@@ -905,7 +1004,14 @@ with tab5:
         {'Factor': 'Geographic Spread (10%)', 'Score': bd['Geographic Spread']},
         {'Factor': 'Population Affected (10%)', 'Score': bd['Population Affected']}
     ])
-    fig_pie = px.pie(bd_df, names='Factor', values='Score', title="Component Weights in 0-100 Disaster Impact Score", hole=0.5)
+    fig_pie = px.pie(
+        bd_df,
+        names='Factor',
+        values='Score',
+        title="Component Weights in 0-100 Disaster Impact Score",
+        hole=0.5,
+        color_discrete_sequence=theme['chart_colors']
+    )
     fig_pie.update_layout(**PLOTLY_THEME, height=320)
     st.plotly_chart(fig_pie, use_container_width=True)
 
@@ -936,6 +1042,7 @@ with tab6:
         fig_agri = px.line(
             agri_df.groupby(['date', 'channel'])['revenue_inr'].sum().reset_index(),
             x='date', y='revenue_inr', color='channel',
+            color_discrete_sequence=theme['chart_colors'],
             title="Traditional Farming: Offline Mandi vs AgriTech Channel Trajectory"
         )
         fig_agri.update_layout(**PLOTLY_THEME, height=300)
@@ -958,6 +1065,7 @@ with tab6:
         fig_tech = px.line(
             tech_df[tech_df['year'] == 2023].groupby(['date', 'category'])['revenue_inr'].sum().reset_index(),
             x='date', y='revenue_inr', color='category',
+            color_discrete_sequence=theme['chart_colors'],
             title="2023 AI Recession: AI Upskilling Surge vs Luxury Contraction"
         )
         fig_tech.update_layout(**PLOTLY_THEME, height=300)
@@ -982,6 +1090,7 @@ with tab7:
             x='category',
             y=['Increase Online / D2C Spending', 'No Change', 'Decrease / Offline Traditional'],
             barmode='stack',
+            color_discrete_sequence=theme['chart_colors'],
             title="Consumer Channel Preference Shift by Category (%)",
             labels={'value': 'Share of Respondents (%)', 'category': ''}
         )
