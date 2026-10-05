@@ -1,34 +1,27 @@
 {
     "best_model": "XGBoost",
-    "best_model_path": "models\\best_model.pkl",
+    "best_model_path": "models\\model.pkl",
     "metrics": {
+        "Random Forest": {
+            "mae": 135725.99,
+            "rmse": 514948.8,
+            "mape_pct": 6.84,
+            "r2_score": 0.9131,
+            "model_path": "models\\random_forest.pkl"
+        },
+        "XGBoost": {
+            "mae": 123505.42,
+            "rmse": 418946.6,
+            "mape_pct": 6.65,
+            "r2_score": 0.9425,
+            "model_path": "models\\xgboost.pkl"
+        },
         "Linear Regression (Baseline)": {
             "mae": 340687.8,
             "rmse": 643497.02,
             "mape_pct": 37.14,
             "r2_score": 0.8644,
             "model_path": "models\\linear_regression_baseline.pkl"
-        },
-        "Random Forest": {
-            "mae": 128948.76,
-            "rmse": 481307.27,
-            "mape_pct": 6.7,
-            "r2_score": 0.9241,
-            "model_path": "models\\random_forest.pkl"
-        },
-        "XGBoost": {
-            "mae": 123341.11,
-            "rmse": 417113.61,
-            "mape_pct": 6.64,
-            "r2_score": 0.943,
-            "model_path": "models\\xgboost.pkl"
-        },
-        "LightGBM": {
-            "mae": 178389.87,
-            "rmse": 714278.93,
-            "mape_pct": 7.4,
-            "r2_score": 0.8329,
-            "model_path": "models\\lightgbm.pkl"
         }
     }
 }

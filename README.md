@@ -1,208 +1,225 @@
-# 🛡️ Disaster-Aware Sales Forecasting and Impact Analysis System
+# ⚡ Disaster-Aware Sales Forecasting & Impact Analysis System
 
-> An enterprise-grade AI decision support system integrating historical sales time series, multi-category disruption event dynamics (Pandemics, Floods, Cyclones, Traditional Farming Shocks, Modern AI Job Recessions), consumer sentiment survey signals (BCG India Wave 1, N=2,106), 0–100 composite impact scoring, and SHAP explainability.
+[![Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Machine Learning](https://img.shields.io/badge/ML-RandomForest%20%7C%20XGBoost-orange.svg)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
----
+An intelligent, enterprise-grade decision support platform built with **Python, Machine Learning, and Streamlit** for quantified demand forecasting and shock resilience analysis across natural disasters, climate crop failures, pandemics, and macroeconomic recessions.
 
-## 📌 Executive Summary
-
-Traditional sales forecasting models assume future consumer demand roughly mirrors historical patterns. However, sudden disruptive events—such as natural disasters, pandemics, crop failures, or white-collar AI layoffs—invalidate historical trends by causing asymmetric channel shifts (Offline Mandi/Store $\to$ Online/D2C), supply bottlenecks, and sector-specific demand shocks.
-
-This system answers three critical enterprise questions:
-1. **Forecast**: *"Given previous sales and active disruption shocks, how much will we sell next?"*
-2. **Impact & Risk**: *"How severely are operations impacted, and what is our enterprise risk tier (Low, Moderate, High, Critical)?"*
-3. **Recovery & Strategy**: *"How long will it take to recover 95% baseline sales, and what what-if actions minimize loss?"*
+Designed and optimized for a **BE AI&DS Final Year Capstone Project** and 1-click deployment on **GitHub + Streamlit Cloud**.
 
 ---
 
-## 🏗️ 6-Layer System Architecture
+## 📑 Table of Contents
+1. [Executive Summary](#-executive-summary)
+2. [Project Architecture](#-project-architecture)
+3. [Streamlit UI Navigation](#-streamlit-ui-navigation)
+4. [Dataset & Schema Assumptions](#-dataset--schema-assumptions)
+5. [Automated Data Preprocessing Engine](#-automated-data-preprocessing-engine)
+6. [Machine Learning & Zero-Leakage Validation](#-machine-learning--zero-leakage-validation)
+7. [Disaster Impact Score (0–100) Formulation](#-disaster-impact-score-0100-formulation)
+8. [Local Installation & Setup](#-local-installation--setup)
+9. [Deployment to Streamlit Cloud](#-deployment-to-streamlit-cloud)
+10. [MVP Feature Verification Checklist](#-mvp-feature-verification-checklist)
+
+---
+
+## 🌟 Executive Summary
+
+Traditional retail and agricultural sales forecasting systems rely solely on historical autoregressive patterns and seasonal trends, leading to severe supply-chain collapse during exogenous disruptions (e.g., COVID-19 lockdowns, Kharif drought shocks, cyclone logistics bottlenecks, or AI layoff recessions).
+
+This system bridges that gap by integrating:
+- **Exogenous Disruption Signals** into tabular machine learning models.
+- **Before → During → After Disruption Phase Analysis** tracking 95% baseline recovery crossing.
+- **Dynamic What-If Scenario Stress Testing** allowing business leaders to simulate custom supply and demand shocks.
+- **Defensible 0–100 Disaster Impact Score** categorizing risk posture (Low, Medium, High, Critical).
+
+---
+
+## 🏛️ Project Architecture
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│ 1. MULTI-SOURCE DATA INGESTION                              │
-│  • Multi-Year Historical Sales (2019–2023, 6 Regions)       │
-│  • Real-Calibrated Disaster & Disruption Event Registry     │
-│  • BCG India COVID-19 Consumer Sentiment Survey (N=2,106)   │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 2. PREPROCESSING & STRICT TIME-BASED VALIDATION             │
-│  • 0% Data Leakage Split: Train (2019–2022) | Test (2023)  │
-│  • Missing Value Handling & Categorical Label Encoding      │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 3. FEATURE ENGINEERING & INTERACTION DOMAIN                 │
-│  • Time Lags (1, 2, 4, 8 Weeks) & Rolling Window Statistics │
-│  • Cyclical Calendar Encodings (Sine/Cosine Week & Month)   │
-│  • Interactions: (Severity × Sensitivity), (Supply × Channel)│
-│  • Composite 0–100 Disaster Impact Score Computation        │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 4. MACHINE LEARNING FORECASTING ENGINE                      │
-│  • Linear Regression (Baseline)                             │
-│  • Random Forest Regressor                                  │
-│  • LightGBM Regressor                                       │
-│  • XGBoost Regressor (Best Model, R² = 0.9430, MAPE = 6.64%)│
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 5. DECISION SUPPORT & RECOVERY ENGINE                       │
-│  • Net Sales Impact % Calculation                           │
-│  • Before-During-After Disruption Phase Segmentation        │
-│  • 95% Baseline Sales Recovery Horizon Estimation           │
-│  • Real-time What-If Simulation (Normal vs Mod vs Severe)   │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 6. EXPLAINABILITY & STREAMLIT ENTERPRISE UI                 │
-│  • SHAP Waterfall Feature Attributions (INR Impact)         │
-│  • Automated Natural-Language Executive Narratives          │
-│  • 7 Interactive Dashboard Tabs & Viva Examination Guide    │
-└─────────────────────────────────────────────────────────────┘
+disaster-sales-forecasting/
+│
+├── app.py                      # Core Streamlit multi-section application
+├── requirements.txt            # Streamlit Cloud-compatible dependencies
+├── README.md                   # Comprehensive technical documentation
+│
+├── data/
+│   ├── sample_sales.csv        # Built-in multi-year retail & agri sales dataset
+│   └── sample_disasters.csv    # Built-in historical disruption event registry
+│
+├── models/
+│   ├── model.pkl               # Primary trained ML model (XGBoost / Random Forest)
+│   ├── best_model.pkl          # Top-performing benchmark model
+│   ├── evaluation_metrics.json # Out-of-time evaluation metrics (MAE, RMSE, MAPE, R²)
+│   └── feature_columns.pkl     # Persisted feature column schema
+│
+├── src/
+│   ├── preprocessing.py        # Schema validation, missing value imputation, deduplication
+│   ├── features.py             # Lags, rolling averages, and interaction feature engineering
+│   ├── impact_score.py         # Composite 0–100 Disaster Impact Score algorithm
+│   ├── forecasting.py          # ML horizon prediction & What-If scenario forecasting
+│   ├── recovery.py             # Phase tracking & 95% baseline recovery crossing
+│   └── explain.py              # Feature contribution diagnostics
+│
+└── notebooks/
+    └── model_training.ipynb    # Jupyter experiment and training pipeline
 ```
 
 ---
 
-## 🧮 Mathematical Formulation
+## 🧭 Streamlit UI Navigation
 
-### 1. Composite Disaster Impact Score ($0 - 100$)
-$$ImpactScore = \min\left(100, \, 100 \times \left( \sum_{i=1}^{6} w_i \cdot x_{i,\text{norm}} \right) \times S_{\text{industry}} \right)$$
+The application is organized into **five logical, intuitive tabs**:
 
-| Component | Variable ($x_i$) | Weight ($w_i$) | Normalization | Operational Justification |
-| :--- | :--- | :---: | :---: | :--- |
-| **Severity** | $S$ | **0.25** | $\frac{S}{10}$ | Direct shock intensity & damage scale |
-| **Supply Disruption** | $SC$ | **0.25** | Bounded $[0, 1]$ | Inventory deficit & logistics paralysis |
-| **Duration** | $D$ | **0.15** | $\min(1.0, \frac{D}{120})$ | Temporal persistence of the event |
-| **Economic Disruption**| $E$ | **0.15** | Bounded $[0, 1]$ | Macro demand & purchasing power shock |
-| **Geographic Spread** | $G$ | **0.10** | Bounded $[0, 1]$ | Multi-state vs localized exposure |
-| **Population Affected**| $P$ | **0.10** | Bounded $[0, 1]$ | Consumer & workforce density impacted |
-
-$$\sum w_i = 0.25 + 0.25 + 0.15 + 0.15 + 0.10 + 0.10 = 1.00$$
-
-### 2. Risk Level Categorization
-* **$0 - 25$**: 🟢 **Low Risk** — Minor friction, standard buffer stock absorption.
-* **$26 - 50$**: 🟡 **Moderate Risk** — Localized supply delays, moderate channel shift.
-* **$51 - 75$**: 🔴 **High Risk** — Severe supply breakdown, substantial offline revenue loss.
-* **$76 - 100$**: 🟣 **Critical Risk** — Systemic shutdown / multi-month disruption, urgent D2C pivot required.
-
-### 3. Disruption Impact Percentage
-$$Impact\% = \frac{\text{During Sales} - \text{Baseline Sales}}{\text{Baseline Sales}} \times 100$$
-
-### 4. Recovery Horizon Detection
-$$\text{Recovery Week} = \min \left\{ t > t_{\text{end}} \mid \text{Sales}_t \ge 0.95 \times \text{Baseline Sales} \right\}$$
+| Section | Key Features |
+| :--- | :--- |
+| **1. 📊 Dashboard** | Executive KPI cards (Total Sales, Average Sales, Growth %, Disaster Impact %, Risk Level), historical sales trend with shaded disaster overlays, and sector breakdown charts. |
+| **2. 📁 Upload Data** | Upload custom sales and disaster CSVs, automatic alias mapping, automated missing value imputation, deduplication, date validation, quality reports, and sample template downloads. |
+| **3. 🚨 Disaster Impact Analysis** | Interactive shock parameters (type, severity, duration, region), Before → During → After sales comparison, 0–100 Disaster Impact Score, risk categorization, and CSV export. |
+| **4. 🔮 Sales Forecast** | User-selected forecast horizon (1 to 12 weeks), model choice (Random Forest, XGBoost, Linear Regression), confidence intervals, out-of-time test metrics (**MAE, RMSE, MAPE, R²**), and CSV export. |
+| **5. 🎯 What-If Simulation** | Stress-test sales under synthetic supply-chain bottlenecks and consumer shift percentages, compare normal vs disaster scenarios, view recovery timelines, and export results. |
 
 ---
 
-## 📊 Measured Model Performance (Out-of-Time Test Set: 2023)
+## 📋 Dataset & Schema Assumptions
 
-All models were evaluated strictly on out-of-time unseen 2023 sales records (5,616 samples) after training on 2019–2022 (22,464 samples):
+### 1. Sales Dataset (`data/sample_sales.csv`)
+The system accepts any CSV with flexible column naming. The preprocessing layer automatically maps the following aliases:
 
-| Model Name | MAE (INR) | RMSE (INR) | MAPE (%) | $R^2$ Score | Status |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **XGBoost Regressor** | **₹123,341.11** | **₹417,113.61** | **6.64%** | **0.9430** | 🏆 **Best Model** |
-| **Random Forest Regressor** | ₹128,948.76 | ₹481,307.27 | 6.70% | 0.9241 | Strong Baseline |
-| **Linear Regression (Baseline)**| ₹340,687.80 | ₹643,497.02 | 37.14% | 0.8644 | Linear Reference |
-| **LightGBM Regressor** | ₹178,389.87 | ₹714,278.93 | 7.40% | 0.8329 | Fast Leaf-wise |
+| Logical Column | Description | Accepted Aliases | Fallback if Missing |
+| :--- | :--- | :--- | :--- |
+| `date` | Timestamp / Order Date | `date`, `Date`, `order_date`, `timestamp`, `sales_date` | **Mandatory** |
+| `revenue_inr` | Sales / Revenue | `revenue_inr`, `revenue`, `sales`, `Sales`, `total_sales`, `amount` | **Mandatory** |
+| `units_sold` | Quantity sold | `units_sold`, `units`, `quantity`, `qty`, `volume` | Generated from revenue |
+| `region` | Geographic location | `region`, `Region`, `state`, `zone`, `market`, `location` | `"National Market"` |
+| `category` | Product sector | `category`, `Category`, `sector`, `industry`, `item_category` | `"General Retail & FMCG"` |
+| `channel` | Fulfillment channel | `channel`, `Channel`, `fulfillment_channel`, `platform` | `"Offline Store / Mandi"` |
+
+### 2. Disaster Dataset (`data/sample_disasters.csv`) - *Optional*
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `disaster_name` | String | Name of event (e.g., Cyclone Fani, COVID-19 Lockdown) |
+| `disaster_type` | String | Category (Cyclone, Flood, Pandemic, Drought, Recession) |
+| `start_date` | Date | Start date (`YYYY-MM-DD`) |
+| `end_date` | Date | End date (`YYYY-MM-DD`) |
+| `severity` | Float (1-10) | Shock intensity |
+| `affected_regions` | String | Comma-separated regions or `"All India"` |
 
 ---
 
-## 🌾 Traditional Farming & 💻 Modern AI Job Recession Specializations
+## ⚙️ Automated Data Preprocessing Engine
 
-### 1. Traditional Farming Disruption (Monsoon Shocks & Mandi Bottlenecks)
-* **Vulnerability**: APMC Mandis experience $-40\%$ to $-65\%$ collapse in crop arrivals during monsoon deficit or hailstorms.
-* **Price vs Volume Paradox**: Farmgate physical volumes crash, causing wholesale inflation while farmers face yield collapse.
-* **AgriTech Pivot**: Direct farm-to-consumer and AgriTech platforms surge ($+42\%$ to $+65\%$), bypassing paralyzed physical transport.
-
-### 2. Modern AI Job Recession & Tech Layoff Shocks
-* **White-Collar Freeze**: Tech hub layoffs in Bengaluru, Pune, NCR trigger sharp contraction in Luxury Apparel ($-35\%$) and Restaurant Dine-in ($-45\%$).
-* **Upskilling Surge**: Direct surge in AI Certification, Prompt Engineering, and Cloud upskilling demand ($+130\%$).
+When a CSV is uploaded or loaded from defaults, `src/preprocessing.py` executes:
+1. **Schema Validation & Alias Matching:** Inspects headers case-insensitively and maps recognized aliases.
+2. **Date Alignment & Error Coercion:** Parses strings into datetime objects; safely drops invalid timestamp rows.
+3. **Missing Value Imputation:** Imputes missing revenue with regional/category median; fills missing categories with sensible defaults.
+4. **Deduplication:** Identifies and drops duplicate `(date, region, category, channel)` rows.
+5. **Calendar Feature Extraction:** Generates `year`, `month`, `quarter`, and `week_of_year`.
+6. **Disaster Alignment:** Intersects sales timeline with disaster active windows and flags `is_disaster_active`.
 
 ---
 
-## 🚀 Getting Started & Installation
+## 🤖 Machine Learning & Zero-Leakage Validation
 
-### 1. Prerequisites
-* Python 3.10+ installed
-* Anaconda / Pip package manager
+To prevent **temporal data leakage**, the system employs strict **out-of-time splitting**:
+- **Training Set:** 2019 – 2022 (Historical normal & disruption cycles)
+- **Evaluation Test Set:** 2023 (Held-out out-of-time benchmark)
 
-### 2. Clone / Open Workspace
+### Evaluated Model Benchmarks:
+| Model Architecture | MAE (₹) | RMSE (₹) | MAPE (%) | $R^2$ Score |
+| :--- | :---: | :---: | :---: | :---: |
+| **XGBoost Regressor** | **₹123,505.42** | **₹418,946.60** | **6.65%** | **0.9425** |
+| **Random Forest Regressor** | ₹135,725.99 | ₹514,948.80 | 6.84% | 0.9131 |
+| **Linear Regression (Baseline)** | ₹340,687.80 | ₹643,497.02 | 37.14% | 0.8644 |
+
+---
+
+## 🧮 Disaster Impact Score (0–100) Formulation
+
+The composite **Disaster Impact Score** is calculated via a normalized weighted index:
+
+$$\text{Base Score} = \left( 0.25 \cdot S + 0.25 \cdot SC + 0.15 \cdot D + 0.15 \cdot E + 0.10 \cdot G + 0.10 \cdot P \right) \times 100$$
+
+$$\text{Final Impact Score} = \min\left(100, \text{Base Score} \times \text{Industry Sensitivity}\right)$$
+
+Where:
+- $S$: Normalized Severity ($0 - 1$)
+- $SC$: Supply Disruption Index ($0 - 1$)
+- $D$: Normalized Duration ($0 - 1$, bounded at 120 days)
+- $E$: Macro Economic Shock Index ($0 - 1$)
+- $G$: Geographic Spread ($0 - 1$)
+- $P$: Population Affected ($0 - 1$)
+
+### Risk Categorization:
+- **0 – 25:** 🟢 **Low Risk**
+- **26 – 50:** 🟡 **Medium Risk**
+- **51 – 75:** 🟠 **High Risk**
+- **76 – 100:** 🔴 **Critical Risk**
+
+---
+
+## 💻 Local Installation & Setup
+
+### Prerequisites
+- Python 3.10, 3.11, or 3.12
+- Git
+
+### Steps:
 ```bash
-cd "d:/sales forecasting"
-```
+# 1. Clone the repository
+git clone https://github.com/AnushkaJagtapp/sales-forecasting.git
+cd sales-forecasting
 
-### 3. Install Dependencies
-```bash
+# 2. Create and activate a virtual environment
+python -m venv venv
+# On Windows:
+.\venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# 3. Install required dependencies
 pip install -r requirements.txt
-```
 
-### 4. (Optional) Regenerate Datasets & Retrain Models
-```bash
-python data_generator.py
-python src/train.py
-```
-
-### 5. Launch the Streamlit Enterprise Application
-```bash
+# 4. Launch the Streamlit application
 streamlit run app.py
 ```
 
-Open your browser at `http://localhost:8501`.
+The app will be available locally at `http://localhost:8501`.
 
 ---
 
-## 🎓 Viva Voce Preparation Guide (Questions & Defensible Answers)
+## 🚀 Deployment to Streamlit Cloud
 
-### Q1: Why is this not just another basic regression project?
-> **Answer**: Standard regression models univariate historical sales under the assumption that past patterns persist. Our system builds a **multivariate disaster-aware decision architecture** integrating external disruption severity, duration, supply bottlenecks, regional sensitivities, survey behavioral signals, and 0–100 composite impact scores to model asymmetric demand and channel reallocations.
+This project is configured for **Streamlit Cloud**:
 
-### Q2: How did you prevent Data Leakage?
-> **Answer**: We strictly enforced **Time-Based Splitting** (Training on 2019–2022, Testing on unseen 2023). We never use random k-fold shuffling. All lag features and rolling aggregations use `shift(1)` to ensure information from the forecast period is never accessible during feature calculation.
-
-### Q3: How is the 0–100 Disaster Impact Score justified?
-> **Answer**: The Disaster Impact Score is a **transparent, project-defined composite index**. We normalize operational disruption factors (Severity 25%, Supply Disruption 25%, Duration 15%, Economic Disruption 15%, Geographic Spread 10%, Population 10%) summing to 1.00, modulated by industry sensitivity. We defend it as an engineered decision feature, not an international universal standard.
-
-### Q4: What is the relationship between Survey Data and Sales Data?
-> **Answer**: Survey data (BCG Wave 1, N=2,106) captures **stated consumer intentions/sentiment** (e.g. 55% shifting to online electronics). Sales data captures **actual realized transactions**. The survey is converted into an external behavioral feature (`survey_channel_shift_pct`) feeding the ML forecasting model.
+1. Push the code to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "Deploy disaster-aware sales forecasting MVP"
+   git push origin main
+   ```
+2. Navigate to [share.streamlit.io](https://share.streamlit.io) and log in with GitHub.
+3. Click **"New App"**.
+4. Select your repository: `AnushkaJagtapp/sales-forecasting`.
+5. Set the branch: `main`.
+6. Set the Main file path: `app.py`.
+7. Click **"Deploy!"**.
 
 ---
 
-## 📁 Repository Structure
+## ✅ MVP Feature Verification Checklist
 
-```text
-d:/sales forecasting/
-├── data/
-│   ├── raw/
-│   │   ├── historical_sales.csv       # Multi-year sales records (28,080 rows)
-│   │   ├── disaster_events.csv        # Disruption event registry (10 events)
-│   │   └── survey_bcg_covid19.csv     # BCG Wave 1 survey responses (N=2,106)
-│   └── processed/
-│       ├── final_dataset.csv          # Aligned time-series dataset
-│       └── featured_dataset.csv       # Preprocessed feature matrix
-├── models/
-│   ├── best_model.pkl                 # Best performing XGBoost model
-│   ├── xgboost.pkl                    # Serialized XGBoost model
-│   ├── random_forest.pkl              # Serialized Random Forest model
-│   ├── lightgbm.pkl                   # Serialized LightGBM model
-│   ├── linear_regression_baseline.pkl # Serialized Linear Regression model
-│   ├── feature_columns.pkl            # 48 feature names list
-│   └── evaluation_metrics.json        # Out-of-time benchmark metrics
-├── src/
-│   ├── impact_score.py                # 0-100 Impact Score formula & weights
-│   ├── features.py                    # Lags, rolling stats, interactions
-│   ├── preprocessing.py               # Time-based splitting & encoding
-│   ├── recovery.py                    # Phase analysis & 95% recovery threshold
-│   ├── explain.py                     # SHAP attribution & business narratives
-│   ├── train.py                       # Out-of-time training pipeline
-│   └── predict.py                     # Inference & scenario simulation
-├── app.py                             # 7-Tab Streamlit enterprise dashboard
-├── data_generator.py                  # Realistic aligned dataset generator
-├── requirements.txt                   # Dependency manifest
-└── README.md                          # Full documentation & viva guide
-```
+- [x] **1. CSV Sales Data Upload:** Upload custom sales CSV with clear column validation and automatic fallback to built-in dataset.
+- [x] **2. Optional Disaster Data Upload:** Upload disaster CSV with graceful error handling and default sample registry.
+- [x] **3. Automatic Data Preprocessing:** Imputes missing values, removes duplicates, validates dates, and logs actions.
+- [x] **4. Dashboard / EDA:** 5 KPI cards (Total Sales, Avg Sales, Growth, Impact %, Risk), historical trends, category & regional charts.
+- [x] **5. Disaster Impact Analysis:** User controls for type/severity/duration/region, Before → During → After trajectory, 0-100 Impact Score, and risk classification.
+- [x] **6. ML Sales Forecasting:** 1-12 week user-selectable horizon, Random Forest & XGBoost, table + line chart, and **MAE, RMSE, MAPE, R²** evaluation metrics.
+- [x] **7. What-If Disaster Simulation:** Modifiable severity, duration, supply disruption %, and consumer shift % comparing normal vs disaster scenarios with recovery timeline.
+- [x] **8. Download Results:** 1-click CSV download buttons for forecasts, impact reports, What-If simulations, and sample data templates.
+- [x] **9. Streamlit Structure:** Organized into the 5 requested tabs.
+- [x] **10. Deployment Constraints Met:** Pure Streamlit Cloud + GitHub deployment without external DBs, Docker, or unnecessary cloud dependencies.
